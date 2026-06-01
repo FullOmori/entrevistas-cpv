@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #09050E;
+  margin: 0;
+  padding: 0;
+}
+
+.ecpv-bg {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #09050E 0%, #130B1C 100%);
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  color: #F0EBF8;
+}
+
+.ecpv-grid::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(167,100,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167,100,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}

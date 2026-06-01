@@ -1,5 +1,4 @@
-import { useState, useEffect, Fragment } from "react";
-
+import { useState, Fragment } from "react";
 
 const F = "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif";
 
@@ -24,7 +23,7 @@ const CARGOS = [
           { t: "group", sec: "Perguntas", qs: [
             { q: "Me lembra o último conteúdo que você fez que não era o que foi pedido — você foi além. O que aconteceu?", ins: "Vai direto ao protagonismo criativo. Se não consegue lembrar nenhum caso, ela executa mas não cria por iniciativa.", fu: "Como a pessoa que pediu reagiu quando viu que você extrapolou o briefing?" },
             { q: "Me descreve um conteúdo de qualquer marca que você gostaria de ter feito. Por quê aquele?", ins: "A referência escolhida revela o nível de sofisticação criativa. Quem cita viral genérico vs. quem aponta algo estratégico com raciocínio claro são candidatos muito diferentes." },
-            { q: "Já criou algo que você achava bom e não performou? O que você concluiu?", ins: "Não é 'aprendi a seguir o algoritmo'. É alguém que consegue separar qualidade subjetiva de resultado objetivo — com humildade para rever a própria visão." },
+            { q: "Já criou algo que você achava bom e não performou? O que você concluiu?", ins: "Não é 'aprendi a seguir o algoritmo'. É alguém que consegue separar qualidade subjetiva de resultado objective — com humildade para rever a própria visão." },
           ]},
         ]
       },
@@ -109,11 +108,11 @@ const CARGOS = [
         ]
       },
       {
-        titulo: "Relações e processo", sub: "Colaboração + organização",
+        titulo: "Relações e processo", sub: "Colaboração + organization",
         blocks: [
           { t: "group", sec: "Colaboração", qs: [
             { q: "Me conta de um projeto em que você e outra pessoa tiveram visões criativas completamente diferentes. Como foi?", ins: "Quem mantém o ponto de vista sem demolir o do outro — que entende que o melhor resultado pode vir da tensão entre duas visões — tem maturidade." },
-            { q: "Se eu ligasse agora para alguém com quem você trabalhou, o que essa pessoa diria sobre trabalhar com você?", ins: "A pessoa precisa se colocar no ponto de vista do outro. Autoconsciência alta produz respostas equilibradas, com pontos positivos e fragilidades reconhecidas." },
+            { q: "Se eu ligasse agora para alguém com quem você trabalhou, o que essa pessoa diria sobre trabalhar com você?", ins: "A pessoa precisa se colocar no ponto de vista do outro. Autoconsciência alta Meso-produz respostas equilibradas, com pontos positivos e fragilidades reconhecidas." },
           ]},
           { t: "group", sec: "Organização", qs: [
             { q: "Me descreve como você organiza seu Figma. O que alguém de fora conseguiria entender do seu arquivo?", ins: "Organização de arquivo é janela para organização mental. Não é sobre ser perfeito — é sobre ter consciência do impacto na colaboração." },
@@ -171,7 +170,7 @@ const CARGOS = [
           { t: "alerta", text: 'Não exija excelência — exija raciocínio coerente e honestidade sobre o que não sabe. Quem diz "não sei, mas raciocino assim..." tem mais valor do que quem inventa.' },
           { t: "group", sec: "Gerenciador e campanhas", qs: [
             { q: "Como você estrutura uma campanha do zero — do objetivo até a segmentação? Me leva pelo seu raciocínio.", ins: '"Me leva pelo raciocínio" é intencional. Você quer entender como pensa, não só se sabe fazer.' },
-            { q: "O que você olha primeiro quando abre o gerenciador de um cliente que você nunca atendeu?", ins: "Quem vai direto para métricas de resultado (CPA, ROAS) tem visão estratégica. Quem vai para configuração primeiro está mais no operacional." },
+            { q: "O que você olha primeiro quando abre o gerenciador de um cliente que você nunca atendeu?", ins: "Quem vai direto para métricas de resultado (CPA, ROAS) tem divisão de negócios e visão de negócio. Quem vai para configuração primeiro está mais no operacional." },
             { q: "Quando você decide pausar um anúncio? Qual é seu critério?", ins: "Critério objetivo vs. feeling. Quem tem regras claras é mais previsível e confiável do que quem decide por instinto." },
           ]},
           { t: "group", sec: "Criativo e copy", qs: [
@@ -230,7 +229,7 @@ const CARGOS = [
           { t: "group", sec: "Perguntas", qs: [
             { q: "Me vende essa entrevista. Por que eu deveria te contratar, em 60 segundos.", ins: "Não é sobre o conteúdo — é sobre estrutura, clareza e presença. Tem abertura que prende atenção? Proposta de valor clara? CTA no final?" },
             { q: "Como você percebe quando perdeu a atenção de alguém numa conversa? E o que você faz?", ins: "SDR que não percebe quando perde o interlocutor vai continuar o pitch no vazio. Essa autoconsciência é a diferença entre quem gera conexão e quem só faz ligação." },
-            { q: "Qual é a pergunta que você mais gosta de fazer para um prospect no primeiro contato? Por quê essa?", ins: "Quem faz perguntas de qualificação rápida está focado em filtrar. Quem faz perguntas para entender o problema do prospect está focado em conexão." },
+            { q: "Qual foi a pergunta que você mais gosta de fazer para um prospect no primeiro contato? Por quê essa?", ins: "Quem faz perguntas de qualificação rápida está focado em filtrar. Quem faz perguntas para entender o problema do prospect está focado em conexão." },
           ]},
         ]
       },
@@ -334,7 +333,6 @@ const CARGOS = [
             { q: "Tem alguma pergunta sobre a empresa, a equipe ou o dia a dia aqui?", ins: "A qualidade das perguntas revela o nível de interesse real." },
             { q: "Tem algo que você queria ter falado e não tivemos oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
           ]},
-          { t: "nota", text: 'Observe o que acontece depois do "é isso, obrigado". Como a pessoa se despede, como trata quem está na recepção. Caráter aparece quando a guarda baixa.' },
           { t: "obs", items: [
             { titulo: "Como ela fala de ex-chefes e colegas", desc: "Culpa generalizada é sinal de alerta. Reconhecer o lado do outro mesmo em conflito é maturidade." },
             { titulo: "Ela faz perguntas sobre você?", desc: "Curiosidade sobre o trabalho e a empresa é sinal de interesse real." },
@@ -446,7 +444,7 @@ function BlockRenderer({ block, color, cs }) {
   return null;
 }
 
-export default function EntrevistasCPV() {
+export default function App() {
   const [cA, setCA] = useState(0);
   const [eA, setEA] = useState(0);
 
@@ -457,173 +455,128 @@ export default function EntrevistasCPV() {
   const handleCargo = (i) => { setCA(i); setEA(0); };
   const handleStep = (d) => setEA(e => Math.max(0, Math.min(total - 1, e + d)));
 
-  // Load external Google Fonts dynamically once on mount to prevent blocking / jank
-  useEffect(() => {
-    if (typeof window !== "undefined" && !document.getElementById("ecpv-font-links")) {
-      const fragment = document.createDocumentFragment();
-
-      const preconnect1 = document.createElement("link");
-      preconnect1.rel = "preconnect";
-      preconnect1.href = "https://fonts.googleapis.com";
-      fragment.appendChild(preconnect1);
-
-      const preconnect2 = document.createElement("link");
-      preconnect2.rel = "preconnect";
-      preconnect2.href = "https://fonts.gstatic.com";
-      preconnect2.crossOrigin = "anonymous";
-      fragment.appendChild(preconnect2);
-
-      const fontLink = document.createElement("link");
-      fontLink.id = "ecpv-font-links";
-      fontLink.rel = "stylesheet";
-      fontLink.href = "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap";
-      fragment.appendChild(fontLink);
-
-      document.head.appendChild(fragment);
-    }
-  }, []);
-
   return (
-    <>
-      <style>{`
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { background: #09050E; }
-        .ecpv-bg {
-          min-height: 100vh;
-          background: linear-gradient(180deg, #09050E 0%, #130B1C 100%);
-          font-family: ${F};
-          color: #F0EBF8;
-        }
-        .ecpv-grid::before {
-          content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
-          background-image: linear-gradient(rgba(167,100,255,0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(167,100,255,0.04) 1px, transparent 1px);
-          background-size: 40px 40px;
-        }
-      `}</style>
+    <div className="ecpv-bg ecpv-grid">
+      <div style={{ position: "relative", zIndex: 1, maxWidth: 860, margin: "0 auto", padding: "28px 20px 60px" }}>
 
-      <div className="ecpv-bg ecpv-grid">
-        <div style={{ position: "relative", zIndex: 1, maxWidth: 860, margin: "0 auto", padding: "28px 20px 60px" }}>
-
-          {/* Header */}
-          <div style={{ textAlign: "center", marginBottom: 28 }}>
-            <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: ".22em", textTransform: "uppercase", color: "#C026D3", marginBottom: 8 }}>People & Performance · CPV</div>
-            <div style={{ fontSize: "clamp(20px,3.5vw,32px)", fontWeight: 800, background: "linear-gradient(135deg,#E879F9,#A78BFA)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginBottom: 5 }}>
-              Condução de Entrevista
-            </div>
-            <div style={{ fontSize: 12, color: "rgba(240,235,248,0.55)" }}>Siga as etapas em sequência — cada cargo tem seu roteiro completo</div>
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: 28 }}>
+          <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: ".22em", textTransform: "uppercase", color: "#C026D3", marginBottom: 8 }}>People & Performance · CPV</div>
+          <div style={{ fontSize: "clamp(20px,3.5vw,32px)", fontWeight: 800, background: "linear-gradient(135deg,#E879F9,#A78BFA)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginBottom: 5 }}>
+            Condução de Entrevista
           </div>
+          <div style={{ fontSize: 12, color: "rgba(240,235,248,0.55)" }}>Siga as etapas em sequência — cada cargo tem seu roteiro completo</div>
+        </div>
 
-          {/* Cargo nav */}
-          <div style={{ display: "flex", gap: 7, flexWrap: "wrap", justifyContent: "center", marginBottom: 24 }}>
-            {CARGOS.map((c, i) => (
-              <button key={i} onClick={() => handleCargo(i)} style={{
-                padding: "8px 18px", borderRadius: 100,
-                border: `2px solid ${i === cA ? c.color : "rgba(167,100,255,0.35)"}`,
-                background: i === cA ? `linear-gradient(135deg,${c.color}55,${c.color}30)` : "rgba(22,10,38,0.9)",
-                color: i === cA ? c.cs : "rgba(240,235,248,0.75)",
-                fontFamily: F, fontSize: 12, fontWeight: 700, cursor: "pointer",
-                boxShadow: i === cA ? `0 0 0 1px ${c.color}33` : "none",
-                transition: "background-color 0.18s, border-color 0.18s, color 0.18s, box-shadow 0.18s",
-              }}>
-                {c.icon} {c.nome}
-              </button>
+        {/* Cargo nav */}
+        <div style={{ display: "flex", gap: 7, flexWrap: "wrap", justifyContent: "center", marginBottom: 24 }}>
+          {CARGOS.map((c, i) => (
+            <button key={i} onClick={() => handleCargo(i)} style={{
+              padding: "8px 18px", borderRadius: 100,
+              border: `2px solid ${i === cA ? c.color : "rgba(167,100,255,0.35)"}`,
+              background: i === cA ? `linear-gradient(135deg,${c.color}55,${c.color}30)` : "rgba(22,10,38,0.9)",
+              color: i === cA ? c.cs : "rgba(240,235,248,0.75)",
+              fontFamily: F, fontSize: 12, fontWeight: 700, cursor: "pointer",
+              boxShadow: i === cA ? `0 0 0 1px ${c.color}33` : "none",
+              transition: "background-color 0.18s, border-color 0.18s, color 0.18s, box-shadow 0.18s",
+            }}>
+              {c.icon} {c.nome}
+            </button>
+          ))}
+        </div>
+
+        {/* Progress bar */}
+        <div style={{ display: "flex", gap: 6, alignItems: "center", marginBottom: 20, padding: "0 2px" }}>
+          {cargo.etapas.map((e, i) => {
+            const isActive = i === eA, isDone = i < eA;
+            return (
+              <Fragment key={`step-${i}`}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", flexShrink: 0 }} onClick={() => setEA(i)}>
+                  <div style={{
+                    width: 28, height: 28, borderRadius: "50%",
+                    border: `2px solid ${isActive ? cargo.color : isDone ? cargo.color + "99" : "rgba(167,100,255,0.2)"}`,
+                    background: isActive ? `${cargo.color}33` : isDone ? `${cargo.color}18` : "transparent",
+                    display: "flex", alignItems: "center", justifyContent: "center",
+                    fontSize: 11, fontWeight: 800,
+                    color: isActive ? cargo.cs : isDone ? cargo.color + "aa" : "rgba(240,235,248,0.2)",
+                    transition: "color 0.2s, border-color 0.2s, background-color 0.2s", flexShrink: 0,
+                  }}>
+                    {isDone ? "✓" : i + 1}
+                  </div>
+                  <span style={{ fontSize: 11, fontWeight: 700, whiteSpace: "nowrap", color: isActive ? cargo.cs : isDone ? "rgba(240,235,248,0.5)" : "rgba(240,235,248,0.2)", transition: "color 0.2s" }}>
+                    {e.titulo}
+                  </span>
+                </div>
+                {i < cargo.etapas.length - 1 && (
+                  <div style={{ flex: 1, height: 2, borderRadius: 1, minWidth: 12, background: isDone ? `${cargo.color}66` : "rgba(167,100,255,0.12)" }} />
+                )}
+              </Fragment>
+            );
+          })}
+        </div>
+
+        {/* Content card */}
+        <div style={{ background: "rgba(19,11,28,0.92)", borderRadius: 16, border: "1px solid rgba(167,100,255,0.18)", overflow: "hidden", marginBottom: 16 }}>
+          <div style={{ padding: "22px 26px 18px", position: "relative", borderBottom: "1px solid rgba(167,100,255,0.12)" }}>
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: `linear-gradient(90deg,${cargo.color},${cargo.cs})` }} />
+            <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, background: `radial-gradient(ellipse at top left,${cargo.color}15 0%,transparent 60%)`, pointerEvents: "none" }} />
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 10, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: cargo.color, marginBottom: 8 }}>
+              <div style={{ width: 18, height: 18, borderRadius: "50%", background: `${cargo.color}33`, color: cargo.cs, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, fontWeight: 800 }}>{eA + 1}</div>
+              {cargo.nome}
+            </div>
+            <div style={{ fontSize: "clamp(16px,2.5vw,22px)", fontWeight: 800, color: cargo.cs, lineHeight: 1.2, marginBottom: 4 }}>{etapa.titulo}</div>
+            <div style={{ fontSize: 12, color: "rgba(240,235,248,0.55)", fontStyle: "italic" }}>{etapa.sub}</div>
+          </div>
+          <div style={{ padding: "22px 26px" }}>
+            {etapa.blocks.map((block, bi) => (
+              <BlockRenderer key={bi} block={block} color={cargo.color} cs={cargo.cs} />
             ))}
           </div>
+        </div>
 
-          {/* Progress bar */}
-          <div style={{ display: "flex", gap: 6, alignItems: "center", marginBottom: 20, padding: "0 2px" }}>
-            {cargo.etapas.map((e, i) => {
-              const isActive = i === eA, isDone = i < eA;
-              return (
-                <Fragment key={`step-${i}`}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 6, cursor: "pointer", flexShrink: 0 }} onClick={() => setEA(i)}>
-                    <div style={{
-                      width: 28, height: 28, borderRadius: "50%",
-                      border: `2px solid ${isActive ? cargo.color : isDone ? cargo.color + "99" : "rgba(167,100,255,0.2)"}`,
-                      background: isActive ? `${cargo.color}33` : isDone ? `${cargo.color}18` : "transparent",
-                      display: "flex", alignItems: "center", justifyContent: "center",
-                      fontSize: 11, fontWeight: 800,
-                      color: isActive ? cargo.cs : isDone ? cargo.color + "aa" : "rgba(240,235,248,0.2)",
-                      transition: "color 0.2s, border-color 0.2s, background-color 0.2s", flexShrink: 0,
-                    }}>
-                      {isDone ? "✓" : i + 1}
-                    </div>
-                    <span style={{ fontSize: 11, fontWeight: 700, whiteSpace: "nowrap", color: isActive ? cargo.cs : isDone ? "rgba(240,235,248,0.5)" : "rgba(240,235,248,0.2)", transition: "color 0.2s" }}>
-                      {e.titulo}
-                    </span>
-                  </div>
-                  {i < cargo.etapas.length - 1 && (
-                    <div style={{ flex: 1, height: 2, borderRadius: 1, minWidth: 12, background: isDone ? `${cargo.color}66` : "rgba(167,100,255,0.12)" }} />
-                  )}
-                </Fragment>
-              );
-            })}
-          </div>
+        {/* Bottom nav */}
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <button
+            disabled={eA === 0}
+            onClick={() => handleStep(-1)}
+            style={{
+              display: "flex", alignItems: "center", gap: 7,
+              padding: "10px 20px", borderRadius: 100,
+              border: "2px solid rgba(167,100,255,.4)",
+              background: "rgba(22,10,38,.9)",
+              color: "rgba(240,235,248,.75)",
+              fontFamily: F, fontSize: 12, fontWeight: 700, cursor: eA === 0 ? "default" : "pointer",
+              opacity: eA === 0 ? 0.25 : 1, transition: "background-color 0.18s, border-color 0.18s, opacity 0.18s, color 0.18s",
+            }}
+          >
+            ← Etapa anterior
+          </button>
 
-          {/* Content card */}
-          <div style={{ background: "rgba(19,11,28,0.92)", borderRadius: 16, border: "1px solid rgba(167,100,255,0.18)", overflow: "hidden", marginBottom: 16 }}>
-            <div style={{ padding: "22px 26px 18px", position: "relative", borderBottom: "1px solid rgba(167,100,255,0.12)" }}>
-              <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 3, background: `linear-gradient(90deg,${cargo.color},${cargo.cs})` }} />
-              <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, background: `radial-gradient(ellipse at top left,${cargo.color}15 0%,transparent 60%)`, pointerEvents: "none" }} />
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 10, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: cargo.color, marginBottom: 8 }}>
-                <div style={{ width: 18, height: 18, borderRadius: "50%", background: `${cargo.color}33`, color: cargo.cs, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, fontWeight: 800 }}>{eA + 1}</div>
-                {cargo.nome}
-              </div>
-              <div style={{ fontSize: "clamp(16px,2.5vw,22px)", fontWeight: 800, color: cargo.cs, lineHeight: 1.2, marginBottom: 4 }}>{etapa.titulo}</div>
-              <div style={{ fontSize: 12, color: "rgba(240,235,248,0.55)", fontStyle: "italic" }}>{etapa.sub}</div>
-            </div>
-            <div style={{ padding: "22px 26px" }}>
-              {etapa.blocks.map((block, bi) => (
-                <BlockRenderer key={bi} block={block} color={cargo.color} cs={cargo.cs} />
-              ))}
-            </div>
-          </div>
+          <span style={{ fontSize: 11, fontWeight: 700, color: "rgba(240,235,248,.35)", letterSpacing: ".05em" }}>
+            {eA + 1} de {total}
+          </span>
 
-          {/* Bottom nav */}
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-            <button
-              disabled={eA === 0}
-              onClick={() => handleStep(-1)}
-              style={{
-                display: "flex", alignItems: "center", gap: 7,
-                padding: "10px 20px", borderRadius: 100,
-                border: "2px solid rgba(167,100,255,.4)",
-                background: "rgba(22,10,38,.9)",
-                color: "rgba(240,235,248,.75)",
-                fontFamily: F, fontSize: 12, fontWeight: 700, cursor: eA === 0 ? "default" : "pointer",
-                opacity: eA === 0 ? 0.25 : 1, transition: "background-color 0.18s, border-color 0.18s, opacity 0.18s, color 0.18s",
-              }}
-            >
-              ← Etapa anterior
-            </button>
+          <button
+            disabled={eA === total - 1}
+            onClick={() => handleStep(1)}
+            style={{
+              display: "flex", alignItems: "center", gap: 7,
+              padding: "10px 20px", borderRadius: 100,
+              border: "2px solid transparent",
+              background: eA < total - 1 ? `linear-gradient(135deg,${cargo.color},${cargo.cs})` : "rgba(22,10,38,.4)",
+              color: "#fff",
+              fontFamily: F, fontSize: 12, fontWeight: 700, cursor: eA === total - 1 ? "default" : "pointer",
+              opacity: eA === total - 1 ? 0.25 : 1, transition: "background-color 0.18s, border-color 0.18s, opacity 0.18s, color 0.18s",
+            }}
+          >
+            Próxima etapa →
+          </button>
+        </div>
 
-            <span style={{ fontSize: 11, fontWeight: 700, color: "rgba(240,235,248,.35)", letterSpacing: ".05em" }}>
-              {eA + 1} de {total}
-            </span>
-
-            <button
-              disabled={eA === total - 1}
-              onClick={() => handleStep(1)}
-              style={{
-                display: "flex", alignItems: "center", gap: 7,
-                padding: "10px 20px", borderRadius: 100,
-                border: "2px solid transparent",
-                background: eA < total - 1 ? `linear-gradient(135deg,${cargo.color},${cargo.cs})` : "rgba(22,10,38,.4)",
-                color: "#fff",
-                fontFamily: F, fontSize: 12, fontWeight: 700, cursor: eA === total - 1 ? "default" : "pointer",
-                opacity: eA === total - 1 ? 0.25 : 1, transition: "background-color 0.18s, border-color 0.18s, opacity 0.18s, color 0.18s",
-              }}
-            >
-              Próxima etapa →
-            </button>
-          </div>
-
-          <div style={{ textAlign: "center", marginTop: 40, fontSize: 11, color: "rgba(240,235,248,.2)", letterSpacing: ".1em", textTransform: "uppercase" }}>
-            CPV · People & Performance · Condução de Entrevista v3
-          </div>
+        <div style={{ textAlign: "center", marginTop: 40, fontSize: 11, color: "rgba(240,235,248,.2)", letterSpacing: ".1em", textTransform: "uppercase" }}>
+          CPV · People & Performance · Condução de Entrevista v3
         </div>
       </div>
-    </>
+    </div>
   );
 }
