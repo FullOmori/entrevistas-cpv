@@ -76,47 +76,47 @@ const CARGOS = [
       {
         titulo: "Abertura", sub: "Script + aquecimento",
         blocks: [
-          { t: "script", text: '"Antes de começar, quero que saiba que não existe resposta certa ou errada aqui. Estou mais interessado em te conhecer como pessoa e entender como você pensa do que avaliar o técnico — isso a gente já viu no portfólio. Pode ficar à vontade."' },
-          { t: "nota", text: "O portfólio já foi avaliado. Aqui você investiga como a pessoa pensa, aprende e se comporta em equipe. Coachability e curiosidade valem mais do que domínio técnico avançado." },
+          { t: "script", text: '"Antes de começar, quero que saiba que não existe resposta certa aqui. O portfólio a gente já viu — aqui eu quero entender quem você é como designer: como você pensa, como você resolve, como você se comporta quando o projeto complica. Pode ficar à vontade."' },
+          { t: "nota", text: "O portfólio já foi avaliado. Aqui você investiga processo, maturidade e identidade profissional. O que você busca não é o designer mais talentoso — é quem pensa com clareza, entrega com consistência e cresce com feedback." },
           { t: "group", sec: "Aquecimento", qs: [
-            { q: "Me conta um pouco sobre você — não o currículo. A pessoa.", ins: "A escolha do que contar primeiro é reveladora. Quem fala só de conquistas está no modo performance. Quem traz algo pessoal está sendo real.", fu: 'Se citar só realizações: "E fora do trabalho, o que te define?"' },
-            { q: "O que você sabia sobre a CPV antes de se candidatar? Como você chegou até aqui?", ins: "Separa quem se candidatou a tudo de quem teve intenção. Interesse genuíno aparece nos detalhes que a pessoa menciona." },
+            { q: "Me conta sobre você além do portfólio — o que te move como designer?", ins: "A resposta revela identidade profissional. Quem fala de resolver problemas tem maturidade diferente de quem fala de fazer coisas bonitas. Nenhum é errado — mas dizem muito sobre o que vai motivar essa pessoa no dia a dia.", fu: 'Se falar só de estética: "E quando te pedem algo que você acha feio mas que funciona — como você lida?"' },
+            { q: "Quando você olha para o seu trabalho, o que te dá mais orgulho — a estética, a solução ou o processo?", ins: "Não existe resposta certa. O que você observa é a coerência entre o que a pessoa valoriza e o tipo de trabalho que vai encontrar aqui. Designer que valoriza só estética vai frustrar em ambiente orientado a resultado." },
           ]},
         ]
       },
       {
-        titulo: "Visão criativa", sub: "Como ela pensa design",
+        titulo: "Criatividade e processo", sub: "Como ela pensa e começa",
         blocks: [
-          { t: "group", sec: "Perguntas", qs: [
-            { q: "Me mostra — ou descreve — uma peça sua que você considera seu melhor trabalho. Por que essa?", ins: "A escolha importa tanto quanto a explicação. Quem escolhe a mais impressionante visualmente vs. quem escolhe a que resolveu melhor um problema real são perfis diferentes.", fu: "E tem alguma peça que você não mostraria no portfólio mas que aprendeu muito fazendo?" },
-            { q: "Já recebeu um briefing tão aberto que você não sabia por onde começar? O que fez?", ins: "Testa tolerância à ambiguidade. Quem tem processo de organizar o vazio para chegar a um ponto de partida tem maturidade criativa." },
-            { q: "Quando você olha para o trabalho de um designer que admira, o que exatamente você observa primeiro?", ins: '"Cores bonitas" é raso. "Hierarquia tipográfica, eye-flow, espaço negativo" — é alguém que realmente estuda design, não só consome.' },
+          { t: "group", sec: "Processo criativo", qs: [
+            { q: "Me descreve como você começa um projeto do zero. O que acontece antes de abrir o Figma?", ins: "Quem tem processo descreve com clareza: leitura do briefing, referências, rascunho, alinhamento. Quem abre o Figma antes de ter clareza do problema vai iterar por tentativa e erro — e gerar retrabalho.", fu: "E quando o briefing chega incompleto — você começa assim mesmo ou espera até ter as respostas que precisa?" },
+            { q: "Já teve um briefing muito aberto, sem referências nem direção clara? Como você lidou?", ins: "Testa tolerância à ambiguidade. Designer que paralisa diante do vazio depende de briefing perfeito para entregar. Quem cria processo próprio para organizar o vazio tem maturidade criativa." },
+            { q: "Me mostra — ou descreve — uma peça que representa bem o seu jeito de trabalhar. Por que essa?", ins: "A escolha diz tanto quanto a explicação. Quem escolhe pelo impacto que gerou vale mais do que quem escolhe pela peça mais bonita. O 'por quê' revela o que a pessoa valoriza no próprio trabalho.", fu: "E uma peça que você não mostraria no portfólio mas que aprendeu muito fazendo?" },
           ]},
         ]
       },
       {
-        titulo: "Responsabilidade e aprendizado", sub: "Ownership + crescimento",
+        titulo: "Ownership e entrega", sub: "Responsabilidade + adaptação",
         blocks: [
-          { t: "group", sec: "Ownership", qs: [
-            { q: "Já entregou algo que você sabia que não era o seu melhor, mas dentro do prazo? Como se sentiu?", ins: "O que você busca é alguém que sente desconforto genuíno ao entregar abaixo do padrão — que não normaliza isso.", fu: "Você comunicou para quem pediu que estava abaixo do seu padrão, ou entregou sem comentar?" },
-            { q: "Como você reage quando alguém pede uma mudança que vai contra sua visão estética — e você sabe que tem razão?", ins: '"E você sabe que tem razão" cria tensão intencional. Designer com ego inflado não serve bem o negócio.' },
+          { t: "group", sec: "Responsabilidade", qs: [
+            { q: "Já foi responsável por um projeto de ponta a ponta — do briefing à entrega final? Me conta como foi.", ins: "Separa quem executou peças de quem pensou o todo. Quem teve ownership real sabe descrever os problemas que apareceram no meio e como resolveu — não só o resultado.", fu: "Teve um momento em que você precisou tomar uma decisão criativa sozinho, sem aprovação? O que fez?" },
+            { q: "Como você garante qualidade quando tem muitas entregas ao mesmo tempo?", ins: "Quem tem processo de priorização descreve com precisão. Quem diz 'trabalho mais horas' não tem sistema — tem esforço. E esforço sem sistema não escala." },
           ]},
-          { t: "group", sec: "Aprendizado", qs: [
-            { q: "Me conta uma habilidade de design que você ainda não tem e gostaria muito de desenvolver.", ins: "Quem aponta algo específico demonstra humildade intelectual e direção. Quem diz 'quero melhorar em tudo' não tem clareza de si." },
-            { q: "Qual feedback sobre seu trabalho te incomodou mais — e por que te incomodou?", ins: "A resposta honesta revela o ego e os pontos cegos. Quem descreve o incômodo e reflete sobre o aprendizado é quem você quer no time." },
+          { t: "group", sec: "Adaptação e feedback", qs: [
+            { q: "Me conta de um projeto que sofreu muitas revisões. Como você se sentiu e como conduziu?", ins: "Não busca quem nunca frustrou — busca quem processa a frustração sem deixar o ego contaminar a entrega. Quem narra a situação com maturidade, incluindo o que fez diferente, tem o perfil certo.", fu: "Em algum momento você entendeu por que as revisões eram necessárias — ou ficou no 'o cliente não entende'?" },
+            { q: "Como você reage quando o cliente ou gestor pede algo que você acha que vai prejudicar o resultado?", ins: "Designer com ego inflado defende a visão acima do resultado. Designer sem ego entrega sem questionar. O que você quer é quem argumenta com contexto e aceita quando o outro tem razão." },
           ]},
         ]
       },
       {
-        titulo: "Relações e processo", sub: "Colaboração + organization",
+        titulo: "Colaboração e fit", sub: "Time + ambiente",
         blocks: [
           { t: "group", sec: "Colaboração", qs: [
-            { q: "Me conta de um projeto em que você e outra pessoa tiveram visões criativas completamente diferentes. Como foi?", ins: "Quem mantém o ponto de vista sem demolir o do outro — que entende que o melhor resultado pode vir da tensão entre duas visões — tem maturidade." },
-            { q: "Se eu ligasse agora para alguém com quem você trabalhou, o que essa pessoa diria sobre trabalhar com você?", ins: "A pessoa precisa se colocar no ponto de vista do outro. Autoconsciência alta Meso-produz respostas equilibradas, com pontos positivos e fragilidades reconhecidas." },
+            { q: "Como você apresenta suas ideias para pessoas que não são da área criativa?", ins: "Quem traduz a lógica criativa para negócio — 'fiz assim porque quero que o olho vá para cá, o que aumenta a chance de clicar' — tem habilidade rara. Quem espera que o outro 'entenda o design' vai frustrar sempre." },
+            { q: "Já trabalhou com Social Media ou tráfego para alinhar uma campanha? Como foi?", ins: "Para CPV especificamente, designer não trabalha isolado. Observe se a pessoa entende que o criativo serve o resultado — e não só o portfólio." },
           ]},
-          { t: "group", sec: "Organização", qs: [
-            { q: "Me descreve como você organiza seu Figma. O que alguém de fora conseguiria entender do seu arquivo?", ins: "Organização de arquivo é janela para organização mental. Não é sobre ser perfeito — é sobre ter consciência do impacto na colaboração." },
-            { q: "Já teve duas demandas urgentes ao mesmo tempo. O que você faz?", ins: "Observe se tem critério de priorização ou entra em paralisia. Paralisia é um padrão que se repete." },
+          { t: "group", sec: "Fit cultural", qs: [
+            { q: "O que te faz querer crescer dentro de um lugar — e não só passar por ele?", ins: "Quem responde com clareza sabe o que quer. Quem é vago ainda não parou para pensar nisso. Compare a resposta com o que você pode oferecer — e seja honesto se não tem match." },
+            { q: "Que tipo de ambiente tira o melhor de você criativamente?", ins: "A resposta revela o que a pessoa precisa para performar. Não existe certo ou errado — existe compatibilidade com a cultura que vocês têm." },
           ]},
         ]
       },
@@ -127,11 +127,11 @@ const CARGOS = [
             { q: "Tem alguma pergunta sobre a empresa, a equipe ou o dia a dia aqui?", ins: "A qualidade das perguntas revela o nível de interesse real. Quem não tem nenhuma pergunta estava só de passagem." },
             { q: "Tem algo que você queria ter falado e não tivemos oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
           ]},
-          { t: "nota", text: 'Observe o que acontece depois do "é isso, obrigado". Como a pessoa se despede, como trata quem está na recepção. Caráter aparece quando a guarda baixa.' },
+          { t: "nota", text: 'Observe o que acontece depois do "é isso, obrigado". Como a pessoa se despede. Caráter aparece quando a guarda baixa.' },
           { t: "obs", items: [
-            { titulo: "Como ela fala de ex-chefes e colegas", desc: "Culpa generalizada é sinal de alerta. Reconhecer o lado do outro mesmo em conflito é maturidade." },
-            { titulo: "Ela faz perguntas sobre você?", desc: "Curiosidade sobre o trabalho e a empresa é sinal de interesse real." },
-            { titulo: "Como ela admite erro", desc: "Busca contextos, não desculpas. Quem assume e aprende é quem você quer no time." },
+            { titulo: "Como ela fala do próprio trabalho", desc: "Orgulho excessivo sem autocrítica é sinal de alerta. Quem aponta o que melhoraria numa peça própria revela maturidade." },
+            { titulo: "Ela faz perguntas sobre o trabalho e a equipe?", desc: "Curiosidade genuína sobre com quem vai trabalhar e o que vai fazer é sinal de interesse real." },
+            { titulo: "Como ela reage à palavra 'revisão'", desc: "Observe o tom. Quem tensa ao ouvir revisão vai criar atrito. Quem entende revisão como parte do processo tem maturidade." },
           ]},
         ]
       },
