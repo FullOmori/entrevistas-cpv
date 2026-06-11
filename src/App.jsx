@@ -215,48 +215,49 @@ const CARGOS = [
       {
         titulo: "Abertura", sub: "Script + aquecimento",
         blocks: [
-          { t: "script", text: '"Antes de começar, quero que saiba que não existe resposta certa ou errada aqui. Estou mais interessado em te conhecer como pessoa e entender como você pensa do que avaliar conhecimento técnico — isso a gente já viu no portfólio. Pode ficar à vontade."' },
-          { t: "nota", text: "Não buscamos o 'vendedor nato'. Buscamos alguém com energia, curiosidade genuína sobre pessoas e capacidade de construir relacionamento com consistência." },
+          { t: "script", text: '"Antes de começar, quero deixar claro: não existe resposta certa aqui. Quero entender como você pensa, o que te move e como você age quando as coisas não vão bem. SDR bom não é quem fala bonito — é quem insiste do jeito certo e sabe quando parar. Pode ficar à vontade."' },
+          { t: "nota", text: "Você está procurando SDR Inbound com vontade de vencer. Isso não aparece no currículo — aparece em como a pessoa fala de meta, de rejeição, de número. Observe o que ela rastreia, o que a move e o que a paralisa." },
           { t: "group", sec: "Aquecimento", qs: [
-            { q: "Me conta um pouco sobre você — não o currículo. A pessoa.", ins: "A escolha do que contar primeiro é reveladora. Quem fala só de conquistas está no modo performance. Quem traz algo pessoal está sendo real.", fu: 'Se citar só realizações: "E fora do trabalho, o que te define?"' },
-            { q: "O que você sabia sobre a CPV antes de se candidatar? Como você chegou até aqui?", ins: "Separa quem se candidatou a tudo de quem teve intenção. Interesse genuíno aparece nos detalhes que a pessoa menciona." },
+            { q: "Me conta sobre você — não o currículo. O que te move?", ins: "Quem fala de conquistas está em modo performance. Quem revela o que genuinamente importa pra ela está sendo real. O que a faz segurar numa semana difícil?", fu: 'Se citar só realizações: "E o que você faria mesmo que ninguém soubesse ou pagasse?"' },
+            { q: "O que você sabia sobre a CPV antes de se candidatar? Como você chegou até aqui?", ins: "Separa quem se candidatou a tudo de quem veio com intenção. Interesse genuíno aparece nos detalhes que a pessoa menciona sobre o que a empresa faz." },
           ]},
         ]
       },
       {
-        titulo: "Comunicação e presença", sub: "Como ela fala, ouve e convence",
+        titulo: "Ambição e drive", sub: "O motor interno que busca resultado",
         blocks: [
-          { t: "group", sec: "Perguntas", qs: [
-            { q: "Me vende essa entrevista. Por que eu deveria te contratar, em 60 segundos.", ins: "Não é sobre o conteúdo — é sobre estrutura, clareza e presença. Tem abertura que prende atenção? Proposta de valor clara? CTA no final?" },
-            { q: "Como você percebe quando perdeu a atenção de alguém numa conversa? E o que você faz?", ins: "SDR que não percebe quando perde o interlocutor vai continuar o pitch no vazio. Essa autoconsciência é a diferença entre quem gera conexão e quem só faz ligação." },
-            { q: "Qual foi a pergunta que você mais gosta de fazer para um prospect no primeiro contato? Por quê essa?", ins: "Quem faz perguntas de qualificação rápida está focado em filtrar. Quem faz perguntas para entender o problema do prospect está focado em conexão." },
+          { t: "nota", text: "Esta etapa revela se a motivação é interna ou externa. SDR com motor interno sustenta performance sem supervisão constante. Quem precisa de pressão para funcionar não escala." },
+          { t: "group", sec: "Vontade de vencer", qs: [
+            { q: "Você acompanha suas próprias métricas — taxa de conexão, conversão, velocidade de primeiro contato? Me fala seus números.", ins: "Quem tem vontade de vencer conhece os próprios números de cabeça. Não precisa ser exato — o que revela é se a pessoa rastreia ou não. Executor passivo não acompanha.", fu: "Qual desses números você mais quer melhorar agora? Por quê?" },
+            { q: "Você é competitivo? Me dá um exemplo — pode ser fora do trabalho.", ins: "Competitividade saudável não é ego. É querer se superar. Quem não consegue dar nenhum exemplo provavelmente não tem esse drive. Observe: a competição é contra si mesmo ou sempre contra o outro?" },
+            { q: "Me conta um momento em que você estava atrás da meta e virou o jogo — ou chegou perto o suficiente para se orgulhar. O que fez diferente?", ins: "Não é sobre ter virado sempre. É sobre o que a pessoa fez quando estava em desvantagem. Quem improvisa, busca ajuda e muda abordagem tem o comportamento certo." },
           ]},
         ]
       },
       {
-        titulo: "Resiliência e ownership", sub: "Como ela lida com pressão e resultado",
+        titulo: "Qualificação inbound", sub: "Velocidade, critério e handoff",
+        blocks: [
+          { t: "alerta", text: "SDR Inbound lida com leads que já demonstraram interesse. O erro mais comum não é a abordagem — é deixar o lead esfriar, avançar quem não tem perfil ou entregar lead mal qualificado para o closer." },
+          { t: "group", sec: "Urgência e qualificação", qs: [
+            { q: "Um lead entrou pelo site agora. Quanto tempo você tem para fazer o primeiro contato? Por quê?", ins: "Não existe resposta exata, mas quem responde com urgência ('minutos', 'o mais rápido possível') entende que inbound esfria rápido. Quem diz 'quando possível' não entende a janela de oportunidade.", fu: "E se for final de tarde, quase fora do horário comercial — o que você faz?" },
+            { q: "Como você decide em menos de 5 minutos de conversa se um lead vale avançar? Me descreve as perguntas que você faz.", ins: "Quem qualifica com critério claro — perfil, urgência, autoridade, orçamento — pensa estrategicamente. Quem avança qualquer lead 'para o closer decidir' está terceirizando o trabalho." },
+            { q: "Já recebeu um lead muito interessado mas que claramente não tinha perfil. O que fez?", ins: "Disqualificação é uma habilidade. Quem não consegue encerrar gentilmente perde tempo e prejudica o closer. Quem sabe dizer 'não agora' com clareza e sem constranger é valioso." },
+          ]},
+          { t: "group", sec: "Handoff", qs: [
+            { q: "Como você passa um lead qualificado para o closer? Me descreve o que você entrega — além do nome e telefone.", ins: "SDR que entrega lead como número prejudica o time. Quem pensa no que o closer precisa saber — contexto, dor, urgência, o que foi dito — está pensando em resultado." },
+          ]},
+        ]
+      },
+      {
+        titulo: "Resiliência e aprendizado", sub: "Como ela lida com pressão e evolui",
         blocks: [
           { t: "group", sec: "Resiliência", qs: [
-            { q: "Me conta uma situação em que você foi atrás de algo quando teria sido mais fácil desistir.", ins: "Busca resiliência real. O que importa não é que nunca desistiu — é o que a levou a continuar quando o caminho fácil era parar.", fu: "E o que te faria desistir? Qual seria o limite?" },
-            { q: 'Quantos "não" você consegue receber em um dia antes de desanimar? Me conta de verdade.', ins: '"De verdade" convida à honestidade. Quem diz que rejeição não afeta está performando. Quem admite que pesa e descreve como processa tem sistema real de resiliência.' },
+            { q: "Me descreve a semana mais difícil que você teve em vendas. O que estava acontecendo? Como ficou seu humor?", ins: "Não busca quem nunca quebrou — busca quem quebrou e voltou. Honestidade sobre como o emocional foi afetado vale mais do que 'nada me abala'. O que importa é o que a pessoa fez no dia seguinte.", fu: "E o que você fez na segunda-feira depois?" },
+            { q: "Quando você percebe que não vai bater a meta do mês, o que você faz? Seja específico.", ins: "Quem escondeu tem problema de caráter. Quem comunicou, ajustou abordagem e pediu ajuda tem o comportamento certo. 'Trabalho mais' sem detalhe é resposta vaga." },
           ]},
-          { t: "group", sec: "Ownership", qs: [
-            { q: "Já teve um mês em que você sabia que não ia bater a meta antes de ele acabar? O que fez quando percebeu?", ins: "Quem escondeu tem problema de caráter. Quem comunicou proativamente, ajustou abordagem — tem o comportamento certo." },
-            { q: "O que você considera sob sua responsabilidade — e o que considera fora do seu controle em prospecção?", ins: "Quem coloca tudo fora do controle não tem ownership. Quem coloca tudo dentro tem ilusão de controle. O equilíbrio revela maturidade." },
-          ]},
-        ]
-      },
-      {
-        titulo: "Processo e aprendizado", sub: "Organização + evolução",
-        blocks: [
-          { t: "group", sec: "Organização", qs: [
-            { q: "Me descreve como é sua rotina de prospecção num dia típico — do que você faz primeiro ao último.", ins: "SDR sem rotina estruturada depende de inspiração para prospectar — e inspiração não bate meta." },
-            { q: "Como você decide quem prospectar primeiro quando tem vários leads em estágios diferentes?", ins: "Respostas baseadas em potencial de conversão revelam mentalidade estratégica. 'Quem está mais fácil' revela esforço mínimo." },
-            { q: "Como você passaria um lead qualificado para o closer de forma que ele aproveitasse melhor a conversa?", ins: "SDR que entrega lead como número está prejudicando o time. Quem pensa no que o closer precisa saber está pensando em resultado." },
-          ]},
-          { t: "group", sec: "Aprendizado", qs: [
-            { q: "Me conta uma abordagem de prospecção que você testou, não funcionou, e o que aprendeu.", ins: "Quem nunca testou nada diferente é executor puro. Quem testou, errou e extraiu aprendizado tem o ciclo certo." },
-            { q: "O que você estuda sobre vendas e prospecção agora? Seja específico.", ins: '"Seja específico" é intencional. Quem estuda de verdade cita autores, podcasts, livros. Vago em vendas é caro.' },
+          { t: "group", sec: "Aprendizado tático", qs: [
+            { q: "Quando uma abordagem não está convertendo, quanto tempo você leva para mudar? Me conta um exemplo real.", ins: "SDR que não itera fica preso no mesmo script. Quem testa, mede e ajusta rápido tem o ciclo que gera evolução. Quem espera o gestor dizer que não está funcionando é reativo." },
+            { q: "O que você mudou na sua abordagem nos últimos dois meses? O que levou a essa mudança?", ins: '"Dois meses" força resposta recente e real. Quem estuda e aplica responde sem hesitar. Quem é vago ou não lembra nada aprende por acidente, não por intenção.' },
           ]},
         ]
       },
@@ -264,13 +265,14 @@ const CARGOS = [
         titulo: "Encerramento", sub: "Perguntas finais + o que observar",
         blocks: [
           { t: "group", sec: "Perguntas finais obrigatórias", qs: [
-            { q: "Tem alguma pergunta sobre a empresa, a equipe ou o dia a dia aqui?", ins: "A qualidade das perguntas revela o nível de interesse real." },
+            { q: "Tem alguma pergunta sobre a empresa, a equipe ou o dia a dia aqui?", ins: "A qualidade das perguntas revela o nível de interesse real. Quem não tem nenhuma pergunta estava só de passagem." },
             { q: "Tem algo que você queria ter falado e não tivemos oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
           ]},
+          { t: "nota", text: 'Observe o que acontece depois do "é isso, obrigado". Como a pessoa se despede. Caráter aparece quando a guarda baixa.' },
           { t: "obs", items: [
-            { titulo: "Como ela fala de ex-chefes e colegas", desc: "Culpa generalizada é sinal de alerta." },
-            { titulo: "Ela faz perguntas sobre você?", desc: "Curiosidade sobre o trabalho e a empresa é sinal de interesse real." },
-            { titulo: "Como ela admite erro", desc: "Busca contextos, não desculpas. Quem assume e aprende é quem você quer no time." },
+            { titulo: "Ela fala dos próprios números com naturalidade?", desc: "SDR com vontade de vencer conhece suas métricas. Quem não sabe é executor passivo." },
+            { titulo: "Como ela fala de metas que não bateu", desc: "Culpa o contexto antes de se incluir? Ou assume o que foi seu? Ownership aparece nessas histórias." },
+            { titulo: "Ela demonstra curiosidade sobre o produto e o cliente?", desc: "SDR Inbound que não entende o que vende não qualifica bem. Interesse genuíno no problema do prospect é o diferencial." },
           ]},
         ]
       },
