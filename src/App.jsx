@@ -279,6 +279,81 @@ const CARGOS = [
     ]
   },
   {
+    id: "closer", nome: "Closer", color: "#DC2626", cs: "#FCA5A5", icon: "🎯",
+    etapas: [
+      {
+        titulo: "Abertura", sub: "História e contexto de vida · ~8 min",
+        blocks: [
+          { t: "nota", text: "O objetivo aqui é deixar a pessoa contar a própria história no ritmo dela. Família, origem, responsabilidades e contexto de vida surgem naturalmente — sem necessidade de perguntar diretamente." },
+          { t: "group", sec: "Aquecimento", qs: [
+            { q: "Me conta um pouco da sua história — de onde você veio, como chegou até onde tá hoje.", ins: "O que a pessoa escolhe contar primeiro revela o que é prioridade pra ela. Família, cidade, trajetória — tudo vem voluntariamente." },
+            { q: "O que te fez topar essa conversa? O que você tá buscando de diferente?", ins: "Motivação real — financeira, crescimento, fuga, ambição." },
+          ]},
+          { t: "nota", text: "Não pergunte diretamente sobre idade, estado civil ou filhos — além de ser vedado pela CLT, é desnecessário. Quem tem família geralmente menciona ao falar de contexto de vida ou motivação financeira. O que a pessoa escolhe contar voluntariamente é dado muito mais rico do que o que ela responderia por obrigação." },
+          { t: "obs", items: [
+            { titulo: "Clareza de fala", desc: "Como a pessoa se expressa e organiza o raciocínio." },
+            { titulo: "Motivação de entrada", desc: "O que realmente a trouxe até aqui — financeiro, crescimento, fuga, ambição." },
+            { titulo: "Contexto de vida", desc: "Responsabilidades, ritmo e o que molda as decisões dela." },
+            { titulo: "Presença e postura", desc: "Como ela se apresenta quando não está em modo defesa." },
+            { titulo: "Autoconsciência", desc: "Ela sabe o que quer e por quê?" },
+          ]},
+        ]
+      },
+      {
+        titulo: "Técnico", sub: "Processo, método e objeção · ~20 min",
+        blocks: [
+          { t: "alerta", text: "As perguntas parecem conversa, mas cada uma tem um critério de avaliação interno específico. Não entregue o critério — só faça a pergunta e escute." },
+          { t: "group", sec: "Processo e método", qs: [
+            { q: "Me conta uma venda que você perdeu. E me fala onde você acha que perdeu.", ins: "Autocrítica real vs. culpa externa. Closer bom sabe exatamente onde escorregou." },
+            { q: "Quando o lead traz preço como objeção, qual é o seu primeiro movimento?", ins: "Isola a objeção ou já começa a dar desconto? Processo vs. impulso." },
+            { q: "Você já trabalhou com metodologia de vendas definida pela empresa ou sempre construiu do seu jeito?", ins: "Aderência a processo. Sênior que improvisa quebra a operação." },
+            { q: "Me conta como você conduzia o follow-up. Qual era a sua lógica?", ins: "Tem sistema ou é no feeling? Qual a cadência, qual o gatilho." },
+            { q: "Qual foi sua melhor fase de resultado? O que você atribui a isso?", ins: "Consegue replicar ou foi sorte de pipeline? Mentalidade de consistência." },
+          ]},
+          { t: "nota", text: "Se em algum momento o candidato culpar muito o SDR, o marketing ou o lead pela perda — isso é sinal de alerta de postura. Não aprofunde ali, só registre internamente." },
+          { t: "obs", items: [
+            { titulo: "Gestão de objeção", desc: "Isola, investiga e converte — ou entra em desconto por impulso?" },
+            { titulo: "Respeito ao processo", desc: "Segue metodologia ou sempre constrói do próprio jeito?" },
+            { titulo: "Autocrítica", desc: "Sabe onde perdeu ou distribui culpa?" },
+            { titulo: "Sistema de follow-up", desc: "Tem cadência e critério ou age no feeling?" },
+            { titulo: "Consistência de resultado", desc: "A boa fase foi construída ou foi sorte de pipeline?" },
+          ]},
+        ]
+      },
+      {
+        titulo: "Postura", sub: "Maturidade e fit cultural · ~12 min",
+        blocks: [
+          { t: "alerta", text: "Esse é o bloco mais crítico. A regra aqui é nunca perguntar sobre maturidade diretamente — você vai ouvir o que a pessoa acha que você quer ouvir." },
+          { t: "group", sec: "Maturidade e fit", qs: [
+            { q: "Me conta uma situação em que você discordou do seu gestor ou da empresa sobre como vender. O que você fez?", ins: "Resolve dentro ou cria atrito? Tem postura sem ser rebelde?" },
+            { q: "O que você faz quando tá em um mês ruim e a conta não fecha?", ins: "Maturidade financeira + reação à pressão. Entra em espiral ou ativa plano?" },
+            { q: "Você já viveu de comissão pura? Como você se organizava?", ins: "Realidade do PJ comissionado. Quem não sobreviveu a mês ruim antes, vai pedir fixo em 60 dias." },
+          ]},
+          { t: "obs", items: [
+            { titulo: "Ownership", desc: "Assume o resultado como seu ou distribui a responsabilidade?" },
+            { titulo: "Reação à pressão", desc: "Entra em espiral ou ativa um plano quando o mês aperta?" },
+            { titulo: "Maturidade financeira", desc: "Sabe organizar a vida com renda variável?" },
+            { titulo: "Fit PJ", desc: "Já sobreviveu a mês ruim de comissão — ou vai pedir fixo em 60 dias?" },
+          ]},
+        ]
+      },
+      {
+        titulo: "Encerramento", sub: "Inversão do jogo · ~5 min",
+        blocks: [
+          { t: "nota", text: "Aqui você inverte o papel e observa como o closer age quando está do outro lado. As perguntas que ele faz dizem mais do que as respostas que ele deu." },
+          { t: "group", sec: "Perguntas finais obrigatórias", qs: [
+            { q: "Antes de eu te contar os próximos passos, você tem alguma pergunta sobre a operação, o produto ou o que a gente espera?", ins: "Pergunta sobre comissão logo? Pergunta sobre processo, produto, time? Closer bom pergunta sobre ticket médio, ciclo de venda, qualidade do lead ou estrutura do time. Closer mediano pergunta sobre salário. Closer ruim não pergunta nada." },
+          ]},
+          { t: "obs", items: [
+            { titulo: "Closer bom", desc: "Pergunta sobre ticket médio, ciclo de venda, qualidade do lead ou estrutura do time." },
+            { titulo: "Closer mediano", desc: "Pergunta sobre salário." },
+            { titulo: "Closer ruim", desc: "Não pergunta nada." },
+          ]},
+        ]
+      },
+    ]
+  },
+  {
     id: "filmmaker", nome: "Filmmaker", color: "#B45309", cs: "#FCD34D", icon: "🎬",
     etapas: [
       {
