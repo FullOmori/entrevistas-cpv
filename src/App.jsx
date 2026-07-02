@@ -2,71 +2,107 @@ import { useState, Fragment } from "react";
 
 const F = "'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif";
 
+const NIVEIS = [
+  { id: "junior", label: "Júnior" },
+  { id: "pleno", label: "Pleno" },
+  { id: "senior", label: "Sênior" },
+];
+
 const CARGOS = [
   {
-    id: "social", nome: "Social Media", color: "#C026D3", cs: "#E879F9", icon: "📱",
+    id: "social", nome: "Social Media", color: "#C026D3", cs: "#E879F9", icon: "📱", usaNivel: true,
     etapas: [
       {
-        titulo: "Abertura", sub: "Script + aquecimento",
+        titulo: "1 · A empresa", sub: "Apresentação da CPV + verificação de interesse · ~8 min",
         blocks: [
-          { t: "script", text: '"Antes de começar, quero que saiba que não existe resposta certa ou errada aqui. Estou mais interessado em te conhecer como pessoa e entender como você pensa do que avaliar conhecimento técnico — isso a gente já viu no portfólio. Pode ficar à vontade."' },
-          { t: "nota", text: "Se a pessoa ainda estiver rígida depois do script, pergunte algo fora do roteiro — sobre o dia, como chegou. Caráter aparece quando a guarda baixa." },
-          { t: "group", sec: "Aquecimento", qs: [
-            { q: "Me conta um pouco sobre você — não o currículo. A pessoa.", ins: "A escolha do que contar primeiro é reveladora. Quem fala só de conquistas está no modo performance. Quem traz algo pessoal está sendo real.", fu: 'Se citar só realizações: "E fora do trabalho, o que te define?"' },
-            { q: "O que você sabia sobre a CPV antes de se candidatar? Como você chegou até aqui?", ins: "Separa quem se candidatou a tudo de quem teve intenção. Interesse genuíno aparece nos detalhes que a pessoa menciona sobre a empresa." },
+          { t: "script", text: '"Bom te ter aqui. A conversa é simples e leva uns 40 minutos, em três partes: primeiro eu te apresento a CPV e entendo o que te trouxe até aqui, depois quero te conhecer de verdade — sua história e seu jeito — e no fim a gente entra na parte técnica de social media. Não existe resposta certa ou errada. Fica à vontade."' },
+          { t: "group", sec: "Verificação de interesse — antes de você apresentar a empresa", qs: [
+            { q: "Antes de eu te apresentar a CPV, me conta: o que você já sabe sobre o que a gente faz aqui?", ins: "Separa quem pesquisou de quem se candidatou a tudo. Interesse real aparece nos detalhes concretos que a pessoa cita. Chegar sem saber nada é um dado — não elimina sozinho, mas revela o esforço.", fu: "O que te fez querer trabalhar justamente com isso?" },
+            { q: "Como você chegou até essa vaga? O que te chamou atenção nela especificamente?", ins: "Quem tem intenção aponta algo específico da vaga ou da empresa. Quem responde no genérico ('tava procurando oportunidade') está no modo aplicar-em-tudo." },
+          ]},
+          { t: "nota", text: "Agora apresente a CPV com clareza: o que é, o que faz, o momento do negócio e onde social media entra nisso. Enquanto fala, observe — a pessoa conecta o que você diz com o que ela já mencionou? Faz perguntas? Anota? Engajamento aqui é sinal de interesse real." },
+          { t: "group", sec: "Fit com o momento", qs: [
+            { q: "Depois do que te expliquei, o que mais faz sentido pra você nesse trabalho? E o que te preocupa, ou o que você acha que seria seu maior desafio aqui?", ins: "A parte da preocupação é a mais reveladora: quem responde com honestidade tem autoconsciência; quem diz 'nada, tá tudo perfeito' está performando ou não pensou a sério sobre a vaga." },
           ]},
         ]
       },
       {
-        titulo: "Criatividade e iniciativa", sub: "Como ela pensa e cria",
+        titulo: "2 · A pessoa", sub: "História, trajetória e perfil · ~14 min",
         blocks: [
-          { t: "group", sec: "Perguntas", qs: [
-            { q: "Me lembra o último conteúdo que você fez que não era o que foi pedido — você foi além. O que aconteceu?", ins: "Vai direto ao protagonismo criativo. Se não consegue lembrar nenhum caso, ela executa mas não cria por iniciativa.", fu: "Como a pessoa que pediu reagiu quando viu que você extrapolou o briefing?" },
-            { q: "Me descreve um conteúdo de qualquer marca que você gostaria de ter feito. Por quê aquele?", ins: "A referência escolhida revela o nível de sofisticação criativa. Quem cita viral genérico vs. quem aponta algo estratégico com raciocínio claro são candidatos muito diferentes." },
-            { q: "Já criou algo que você achava bom e não performou? O que você concluiu?", ins: "Não é 'aprendi a seguir o algoritmo'. É alguém que consegue separar qualidade subjetiva de resultado objective — com humildade para rever a própria visão." },
+          { t: "group", sec: "Trajetória", qs: [
+            { q: "Me conta sua história — de onde você veio e como foi parar em social media. Não o currículo, o caminho.", ins: "A escolha do que contar primeiro é reveladora. Como a pessoa costura as decisões da vida mostra se tem direção própria ou foi levada pelo acaso.", fu: "Se ficar só no profissional: 'E fora do trabalho, o que te define?'" },
+            { q: "Qual experiência profissional mais te formou até hoje? Por quê ela, e não outra?", ins: "Quem aprende extrai lição de experiências específicas. A escolha e o motivo mostram o que a pessoa valoriza — resultado, aprendizado, relação, superação." },
+            { q: "Me descreve um trabalho ou projeto do qual você se orgulha de verdade. O que era e qual foi o seu papel exato nele?", ins: '"Papel exato" força a separar o que foi dela do que foi do time. Quem tem contribuição real descreve com precisão; quem surfa em trabalho coletivo fica no "nós fizemos".' },
+          ]},
+          { t: "group", sec: "Autoconhecimento — qualidades e defeitos", qs: [
+            { q: "Se eu ligasse agora pra alguém que trabalhou de perto com você, quais duas forças ela citaria na hora? E qual defeito citaria primeiro?", ins: "Enquadrar pelos olhos do outro derruba a resposta ensaiada de 'meu defeito é ser perfeccionista'. Quem tem autoconsciência responde o defeito sem sofrer; quem trava ou maquia mostra pouca maturidade.", fu: "E você concorda com esse defeito? O que já fez a respeito dele?" },
+            { q: "Qual crítica você já recebeu mais de uma vez na vida — de pessoas diferentes?", ins: "Crítica recorrente aponta ponto cego real, não episódio isolado. O valor está no que a pessoa fez com ela: ignorou, racionalizou ou trabalhou de verdade." },
+            { q: "Em que tipo de ambiente e rotina você rende o seu melhor — e em qual você murcha?", ins: "Fit de perfil puro. Compare a resposta com a realidade do dia a dia da CPV. Ninguém rende em tudo; quem se conhece sabe onde brilha e onde sofre." },
           ]},
         ]
       },
       {
-        titulo: "Responsabilidade e aprendizado", sub: "Ownership + crescimento",
-        blocks: [
-          { t: "group", sec: "Ownership", qs: [
-            { q: "Me conta uma situação em que uma entrega sua ficou abaixo do esperado. O que aconteceu, exatamente?", ins: '"Exatamente" força memória real. Quem assume o que foi seu tem ownership. Quem distribui a culpa antes de chegar ao aprendizado, não tem.', fu: "O que você faria diferente hoje se estivesse nessa mesma situação?" },
-            { q: "Você já discordou de uma direção criativa que te pediram? O que fez?", ins: "Busca equilíbrio entre submissão e arrogância. Quem articula o ponto de vista, ouve o outro e decide com maturidade tem o perfil certo." },
-          ]},
-          { t: "group", sec: "Aprendizado", qs: [
-            { q: "O que você aprendeu sobre social media nos últimos três meses que mudou algo no seu trabalho?", ins: "A especificidade do período força resposta real. Quem aprende continuamente responde sem pensar muito. Quem demora ou é vago aprende por acidente." },
-            { q: "Qual foi a última vez que você estava errado sobre algo no trabalho? Como descobriu?", ins: "Quem nunca estava errado tem ego grande ou pouca consciência. Quem responde com facilidade tem autoconsciência e humildade intelectual." },
-          ]},
-        ]
-      },
-      {
-        titulo: "Relações e processo", sub: "Colaboração + organização",
-        blocks: [
-          { t: "group", sec: "Colaboração", qs: [
-            { q: "Me conta de alguém com quem você trabalhou que te ensinou muito — não um chefe, um colega.", ins: "Pessoas que aprendem com colegas têm ego calibrado. Observe o tom: admiração genuína ou condescendência?" },
-            { q: "Já trabalhou com alguém difícil no time? Como foi o dia a dia?", ins: "Quem descreve o conflito sem demonizar o outro tem maturidade relacional. Quem só culpa revela o que faz quando o problema chega.", fu: "E se aquela pessoa estivesse aqui agora, como você acha que ela descreveria o convívio com você?" },
-          ]},
-          { t: "group", sec: "Organização", qs: [
-            { q: "Me descreve como é sua semana típica de produção de conteúdo — do início ao fim.", ins: "Quem tem processo descreve com precisão. Quem não tem será vago. Processo indica entrega consistente, não dependente de inspiração." },
-            { q: "Já perdeu um prazo? O que aconteceu e o que você fez quando percebeu?", ins: "Quem escondeu ou esperou alguém perceber tem problema de caráter. Quem comunicou proativamente e buscou solução tem o comportamento certo." },
-          ]},
-        ]
-      },
-      {
-        titulo: "Encerramento", sub: "Perguntas finais + o que observar",
-        blocks: [
-          { t: "group", sec: "Perguntas finais obrigatórias", qs: [
+        titulo: "3 · Técnica", sub: "Competência de social media · ~16 min · adapta ao nível",
+        intro: [
+          { t: "nota", text: "Selecione o nível da vaga no topo (Júnior / Pleno / Sênior) — as perguntas técnicas abaixo se ajustam. O objetivo aqui é sair da conversa sabendo se a pessoa sabe o ofício, não só se é simpática. Puxe exemplos concretos: 'me dá um caso real', 'que número deu nisso?'." },
+        ],
+        porNivel: {
+          junior: [
+            { t: "group", sec: "Fundamentos", qs: [
+              { q: "Me explica, do seu jeito, a diferença entre um conteúdo feito pra alcançar gente nova e um feito pra converter quem já te acompanha.", ins: "Testa se entende objetivo de conteúdo e noção de funil — não só 'postar'. Júnior bom já intui isso; quem não distingue vai produzir no escuro." },
+              { q: "Você abre o perfil de uma marca que nunca viu. Em 30 segundos, o que você olha pra decidir se o social media dela é bom ou fraco?", ins: "Revela critério estético e estratégico. Quem tem olho aponta consistência, identidade, ganchos, constância. Quem não tem fala 'se tem muitos seguidores'." },
+              { q: "Quando um conteúdo seu vai mal, quais são as primeiras coisas que você checa?", ins: "Pensamento diagnóstico. Quem tem método lista hipóteses (gancho, formato, horário, tema). Quem não tem culpa 'o algoritmo'." },
+            ]},
+            { t: "group", sec: "Cenário prático", qs: [
+              { q: "Vou te dar uma marca — [ex: um restaurante local, ou a própria CPV]. Me fala 3 ideias de conteúdo pra esta semana e por que cada uma.", ins: "O teste mais honesto de um júnior: ideação crua na hora. Observe se as ideias têm objetivo e não são só 'um reels bonitinho'. Repertório e raciocínio importam mais que polimento." },
+            ]},
+            { t: "group", sec: "Ferramentas e repertório", qs: [
+              { q: "Que ferramentas você usa no dia a dia — edição, design, agendamento? Como você aprendeu a usar?", ins: "Mapeia o toolkit e, mais importante, se é autodidata. Júnior que aprende sozinho compensa a falta de experiência rápido." },
+              { q: "Que criador ou marca faz social media excepcional hoje, na sua opinião? O que exatamente ela faz bem?", ins: "A referência escolhida e a precisão da análise revelam o repertório. 'Gosto de vários' é resposta de quem consome sem estudar." },
+            ]},
+          ],
+          pleno: [
+            { t: "group", sec: "Estratégia e processo", qs: [
+              { q: "Você assume um perfil estagnado há meses. Como são seus primeiros 30 dias? O que você analisa antes de postar qualquer coisa?", ins: "Plano estruturado vs. sair postando. Pleno bom faz diagnóstico (público, histórico, concorrência, objetivo) antes de produzir." },
+              { q: "Me descreve seu processo de planejamento de conteúdo — de onde vem a pauta, como você decide o que produzir.", ins: "Quem tem processo descreve com precisão e repetibilidade. Quem depende de inspiração será vago — e entrega inconsistente." },
+              { q: "Quais métricas você acompanha de verdade e quais você ignora? Por quê?", ins: "Separa quem entende métrica de quem olha vaidade. Resposta forte conecta métrica a objetivo (alcance no topo, salvamento/compartilhamento pra relevância, clique/conversa no fundo)." },
+            ]},
+            { t: "group", sec: "Cenário prático — crítica", qs: [
+              { q: "Vou te mostrar (ou descrever) um perfil real. Em 2 minutos: o que está funcionando, o que você mataria e o que faria diferente — nessa ordem de prioridade.", ins: "Olho crítico + priorização. Pleno bom não lista tudo que vê; ele hierarquiza o que dá mais retorno mexer primeiro." },
+            ]},
+            { t: "group", sec: "Resultado e colaboração", qs: [
+              { q: "Já teve um conteúdo que bombou em números mas não trouxe resultado nenhum pro negócio? Como você diferencia os dois?", ins: "Business sense. Quem só celebra viral não amadureceu; quem separa vaidade de resultado pensa como dono." },
+              { q: "Como você trabalha com quem edita, desenha ou filma? O que você entrega pra essas pessoas e o que você cobra de volta?", ins: "Colaboração e clareza de processo. Revela se sabe delegar com briefing bom ou se é gargalo/refaz tudo sozinha." },
+            ]},
+          ],
+          senior: [
+            { t: "group", sec: "Estratégia e negócio", qs: [
+              { q: "Como você conecta a estratégia de social media aos objetivos de negócio da empresa? Me dá um exemplo concreto de quando fez exatamente isso.", ins: "Altitude estratégica. Sênior de verdade fala em objetivo de negócio, não em número de post. Sem exemplo concreto, é sênior de tempo de casa, não de estratégia." },
+              { q: "Me conta de uma virada de estratégia que você liderou: o cenário antes, o que você mudou e o resultado — com número.", ins: "Ownership de resultado. O número importa: quem lidera estratégia mede impacto. Ficar vago aqui é red flag para o nível." },
+              { q: "Como você define a linha editorial e o posicionamento de uma marca do zero? Você tem um framework?", ins: "Método próprio. Sênior tem um jeito estruturado de fazer, não improvisa caso a caso. Ouça se há repetibilidade no raciocínio." },
+            ]},
+            { t: "group", sec: "Cenário prático — estratégia aplicada", qs: [
+              { q: "A CPV quer crescer [defina a meta: presença, leads, autoridade] nos próximos 6 meses. Me esboça a estratégia de social que você proporia — canais, tipo de conteúdo e como mediria sucesso.", ins: "Pensamento estratégico aplicado à nossa realidade. Observe se faz perguntas antes de responder (sinal de senioridade), se prioriza canais com critério e se define métrica de sucesso desde o começo." },
+            ]},
+            { t: "group", sec: "Alocação e liderança", qs: [
+              { q: "Você tem orçamento limitado e precisa escolher: mais volume de conteúdo, investir num criador/influenciador, ou subir a qualidade da produção. Como você decide?", ins: "Trade-off de alocação. Não existe resposta certa — existe raciocínio. Sênior bom decide a partir do objetivo e do estágio da marca, não por preferência pessoal." },
+              { q: "Como você forma e cobra um time de conteúdo? Como você faz alguém júnior evoluir de verdade?", ins: "Liderança e desenvolvimento. Revela se sabe multiplicar resultado através de gente ou se é um executor sênior que só entrega sozinho." },
+            ]},
+          ],
+        },
+        fim: [
+          { t: "group", sec: "Encerramento — perguntas finais obrigatórias", qs: [
             { q: "Tem alguma pergunta sobre a empresa, a equipe ou o dia a dia aqui?", ins: "A qualidade das perguntas revela o nível de interesse real. Quem não tem nenhuma pergunta estava só de passagem." },
-            { q: "Tem algo que você queria ter falado e não tivemos oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
+            { q: "Tem algo que você queria ter falado e não teve oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
           ]},
-          { t: "nota", text: 'Observe o que acontece depois do "é isso, obrigado". Como a pessoa se despede, como trata quem está na recepção. Caráter aparece quando a guarda baixa.' },
+          { t: "nota", text: 'Observe o que acontece depois do "é isso, obrigado": como a pessoa se despede, como trata quem está na recepção. Caráter aparece quando a guarda baixa.' },
           { t: "obs", items: [
-            { titulo: "Como ela fala de ex-chefes e colegas", desc: "Culpa generalizada é sinal de alerta. Reconhecer o lado do outro mesmo em conflito é maturidade." },
-            { titulo: "Ela faz perguntas sobre você?", desc: "Curiosidade sobre o trabalho e a empresa é sinal de interesse real — não só de necessidade de emprego." },
-            { titulo: "Como ela admite erro", desc: "Busca contextos, não desculpas. Quem assume e aprende é quem você quer no time." },
+            { titulo: "Sabia o que a CPV faz?", desc: "Interesse real se prova no dever de casa. Quem chegou sem saber nada estava se candidatando a qualquer coisa." },
+            { titulo: "Provou competência ou só falou bonito?", desc: "Nos exemplos concretos e no cenário prático é que se vê o ofício. Boa lábia sem caso real é sinal de alerta." },
+            { titulo: "Como fala de ex-chefes e colegas", desc: "Culpa generalizada é red flag. Reconhecer o lado do outro mesmo em conflito é maturidade." },
+            { titulo: "Como admite erro", desc: "Busca contexto e aprendizado, não desculpa. Quem assume e evolui é quem você quer no time." },
           ]},
-        ]
+        ],
       },
     ]
   },
@@ -524,10 +560,14 @@ function BlockRenderer({ block, color, cs }) {
 export default function App() {
   const [cA, setCA] = useState(0);
   const [eA, setEA] = useState(0);
+  const [nivel, setNivel] = useState("pleno");
 
   const cargo = CARGOS[cA];
   const etapa = cargo.etapas[eA];
   const total = cargo.etapas.length;
+  const blocks = etapa.porNivel
+    ? [...(etapa.intro || []), ...(etapa.porNivel[nivel] || []), ...(etapa.fim || [])]
+    : etapa.blocks;
 
   const handleCargo = (i) => { setCA(i); setEA(0); };
   const handleStep = (d) => setEA(e => Math.max(0, Math.min(total - 1, e + d)));
@@ -561,6 +601,32 @@ export default function App() {
             </button>
           ))}
         </div>
+
+        {/* Seletor de nível */}
+        {cargo.usaNivel && (
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: 22 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "6px 8px 6px 14px", borderRadius: 100, border: "1px solid rgba(167,100,255,0.2)", background: "rgba(22,10,38,0.6)" }}>
+              <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: ".14em", textTransform: "uppercase", color: "rgba(240,235,248,0.4)" }}>Nível da vaga</span>
+              <div style={{ display: "inline-flex", gap: 4 }}>
+                {NIVEIS.map((n) => {
+                  const on = n.id === nivel;
+                  return (
+                    <button key={n.id} onClick={() => setNivel(n.id)} style={{
+                      padding: "6px 15px", borderRadius: 100,
+                      border: `1.5px solid ${on ? cargo.color : "transparent"}`,
+                      background: on ? `${cargo.color}30` : "transparent",
+                      color: on ? cargo.cs : "rgba(240,235,248,0.5)",
+                      fontFamily: F, fontSize: 12, fontWeight: 700, cursor: "pointer",
+                      transition: "background-color .15s, border-color .15s, color .15s",
+                    }}>
+                      {n.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Progress bar */}
         <div style={{ display: "flex", gap: 6, alignItems: "center", marginBottom: 20, padding: "0 2px" }}>
@@ -605,7 +671,7 @@ export default function App() {
             <div style={{ fontSize: 12, color: "rgba(240,235,248,0.55)", fontStyle: "italic" }}>{etapa.sub}</div>
           </div>
           <div style={{ padding: "22px 26px" }}>
-            {etapa.blocks.map((block, bi) => (
+            {blocks.map((block, bi) => (
               <BlockRenderer key={bi} block={block} color={cargo.color} cs={cargo.cs} />
             ))}
           </div>
