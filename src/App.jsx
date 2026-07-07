@@ -174,74 +174,100 @@ const CARGOS = [
     ]
   },
   {
-    id: "trafego", nome: "Gest. Tráfego", color: "#059669", cs: "#6EE7B7", icon: "📡",
+    id: "trafego", nome: "Gest. Tráfego", color: "#059669", cs: "#6EE7B7", icon: "📡", usaNivel: true,
     etapas: [
       {
-        titulo: "Abertura", sub: "Script adaptado — sem portfólio",
+        titulo: "1 · A empresa", sub: "Apresentação da CPV + verificação de interesse · ~8 min",
         blocks: [
-          { t: "nota", text: "Gestor de Tráfego não passa pela etapa de portfólio. Esta entrevista cobre fit cultural e validação técnica básica na mesma sessão." },
-          { t: "script", text: '"Antes de começar, quero deixar claro que não existe resposta certa ou errada aqui. Eu quero te conhecer como profissional e como pessoa — entender como você pensa, como você age diante de desafios. O que a gente vai ver depois é sobre ferramenta e processo. Aqui é sobre você. Pode ficar à vontade."' },
-          { t: "group", sec: "Aquecimento", qs: [
-            { q: "Me conta sobre você — quem é você além do que tá no currículo?", ins: "Quem o candidato escolhe ser quando não está sendo avaliado pelo técnico?" },
-            { q: "Como o tráfego entrou na sua vida? Foi uma escolha ou aconteceu?", ins: "Quem escolheu ativamente tende a ter mais comprometimento. Observe se criou identidade com a área ou ainda está passando por ela." },
+          { t: "script", text: '"Bom te ter aqui. A conversa leva uns 40 minutos, em três partes: primeiro eu te apresento a CPV e entendo o que te trouxe até aqui, depois quero te conhecer de verdade — sua história e seu jeito — e no fim a gente entra na parte técnica de tráfego. Não existe resposta certa ou errada. Fica à vontade."' },
+          { t: "group", sec: "Verificação de interesse — antes de você apresentar a empresa", qs: [
+            { q: "Antes de eu te apresentar a CPV, me conta: o que você já sabe sobre o que a gente faz aqui?", ins: "Separa quem pesquisou de quem se candidatou a tudo. Interesse real aparece nos detalhes concretos que a pessoa cita. Chegar sem saber nada é um dado — não elimina sozinho, mas revela o esforço.", fu: "O que te fez querer trabalhar justamente com isso?" },
+            { q: "Como você chegou até essa vaga? O que te chamou atenção nela especificamente?", ins: "Quem tem intenção aponta algo específico da vaga ou da empresa. Quem responde no genérico ('tava procurando oportunidade') está no modo aplicar-em-tudo." },
+          ]},
+          { t: "nota", text: "Agora apresente a CPV com clareza: o que é, o que faz, o momento do negócio e onde tráfego pago entra nisso. Enquanto fala, observe — a pessoa conecta o que você diz com o que ela já mencionou? Faz perguntas? Anota? Engajamento aqui é sinal de interesse real." },
+          { t: "group", sec: "Fit com o momento", qs: [
+            { q: "Depois do que te expliquei, o que mais faz sentido pra você nesse trabalho? E o que te preocupa, ou o que você acha que seria seu maior desafio aqui?", ins: "A parte da preocupação é a mais reveladora: quem responde com honestidade tem autoconsciência; quem diz 'nada, tá tudo perfeito' está performando ou não pensou a sério sobre a vaga." },
           ]},
         ]
       },
       {
-        titulo: "Ownership e aprendizado", sub: "Responsabilidade + evolução",
+        titulo: "2 · A pessoa", sub: "História, trajetória e perfil · ~14 min",
         blocks: [
-          { t: "group", sec: "Ownership", qs: [
-            { q: "Me conta uma campanha que você considerava bem estruturada e não deu o resultado esperado. O que concluiu?", ins: "O ponto central não é o erro — é a capacidade de análise pós-falha. Quem culpa a plataforma sem se incluir na equação não tem ownership.", fu: "E o que você mudou concretamente nas campanhas seguintes por causa disso?" },
-            { q: "Quando você entrega um relatório com resultado abaixo do esperado, o que você faz antes de apresentar?", ins: "Quem aparece com análise, contexto e próximos passos já preparados tem ownership real. Quem só apresenta os números e espera o cliente reagir não entende o que é ser dono do resultado." },
+          { t: "group", sec: "Trajetória", qs: [
+            { q: "Me conta sua história — de onde você veio e como o tráfego entrou na sua vida. Foi escolha ou aconteceu?", ins: "Quem escolheu ativamente tende a ter mais comprometimento. Observe se criou identidade com a área ou ainda está passando por ela.", fu: "Se ficar só no profissional: 'E fora do trabalho, o que te define?'" },
+            { q: "Qual experiência profissional mais te formou até hoje? Por quê ela, e não outra?", ins: "Quem aprende extrai lição de experiências específicas. A escolha e o motivo mostram o que a pessoa valoriza — resultado, aprendizado, relação, superação." },
+            { q: "Me descreve uma campanha ou conta da qual você se orgulha de verdade. Qual era o cenário e qual foi o seu papel exato nela?", ins: '"Papel exato" força a separar o que foi dela do que foi do time. Quem tem contribuição real descreve com precisão; quem surfa em trabalho coletivo fica no "nós fizemos".' },
           ]},
-          { t: "group", sec: "Aprendizado", qs: [
-            { q: "Qual atualização de plataforma mudou mais como você trabalha? Como você lidou?", ins: "Quem não consegue citar nada específico reage às mudanças quando já chegam no trabalho, em vez de se antecipar." },
-            { q: "Já testou algo em campanha por curiosidade — algo fora do pedido do cliente — e aprendeu com isso?", ins: "Testa mentalidade de experimentação. Gestor que só executa o que foi combinado nunca vai encontrar o que funciona de verdade." },
+          { t: "group", sec: "Autoconhecimento — qualidades e defeitos", qs: [
+            { q: "Se eu ligasse agora pra alguém que trabalhou de perto com você, quais duas forças ela citaria na hora? E qual defeito citaria primeiro?", ins: "Enquadrar pelos olhos do outro derruba a resposta ensaiada de 'meu defeito é ser perfeccionista'. Quem tem autoconsciência responde o defeito sem sofrer; quem trava ou maquia mostra pouca maturidade.", fu: "E você concorda com esse defeito? O que já fez a respeito dele?" },
+            { q: "Qual crítica você já recebeu mais de uma vez na vida — de pessoas diferentes?", ins: "Crítica recorrente aponta ponto cego real, não episódio isolado. O valor está no que a pessoa fez com ela: ignorou, racionalizou ou trabalhou de verdade." },
+            { q: "Em que tipo de ambiente e rotina você rende o seu melhor — e em qual você murcha?", ins: "Fit de perfil puro. Compare a resposta com a realidade do dia a dia da CPV. Ninguém rende em tudo; quem se conhece sabe onde brilha e onde sofre." },
           ]},
         ]
       },
       {
-        titulo: "Técnico — plataforma e criativos", sub: "Gerenciador + copy + funil",
-        blocks: [
+        titulo: "3 · Técnica", sub: "Competência de tráfego · ~16 min · adapta ao nível",
+        intro: [
+          { t: "nota", text: "Selecione o nível da vaga no topo (Júnior / Pleno / Sênior) — as perguntas técnicas abaixo se ajustam. O objetivo é sair da conversa sabendo se a pessoa sabe o ofício, não só se é simpática. Puxe exemplos concretos: 'me dá um caso real', 'que número deu nisso?'." },
           { t: "alerta", text: 'Não exija excelência — exija raciocínio coerente e honestidade sobre o que não sabe. Quem diz "não sei, mas raciocino assim..." tem mais valor do que quem inventa.' },
-          { t: "group", sec: "Gerenciador e campanhas", qs: [
-            { q: "Como você estrutura uma campanha do zero — do objetivo até a segmentação? Me leva pelo seu raciocínio.", ins: '"Me leva pelo raciocínio" é intencional. Você quer entender como pensa, não só se sabe fazer.' },
-            { q: "O que você olha primeiro quando abre o gerenciador de um cliente que você nunca atendeu?", ins: "Quem vai direto para métricas de resultado (CPA, ROAS) tem divisão de negócios e visão de negócio. Quem vai para configuração primeiro está mais no operacional." },
-            { q: "Quando você decide pausar um anúncio? Qual é seu critério?", ins: "Critério objetivo vs. feeling. Quem tem regras claras é mais previsível e confiável do que quem decide por instinto." },
+        ],
+        porNivel: {
+          junior: [
+            { t: "group", sec: "Fundamentos", qs: [
+              { q: "Como você estrutura uma campanha do zero — do objetivo até a segmentação? Me leva pelo seu raciocínio.", ins: '"Me leva pelo raciocínio" é intencional. Você quer entender como pensa, não só se decorou o passo a passo do gerenciador.' },
+              { q: "Me explica, do seu jeito, o que significam CPM, CTR, CPC e CPA — e qual deles diz mais sobre um problema no criativo.", ins: "Testa se domina o básico e sabe ligar métrica a causa. Júnior bom liga CTR baixo a criativo/segmentação; quem decora definição sem conectar vai otimizar no escuro." },
+              { q: "Quando você decide pausar um anúncio? Qual é seu critério?", ins: "Critério objetivo vs. feeling. Mesmo júnior, quem já tem uma regra clara (volume mínimo, janela de tempo) é mais confiável que quem decide por instinto." },
+            ]},
+            { t: "group", sec: "Cenário prático", qs: [
+              { q: "Um cliente [ex: um e-commerce local] te dá R$ 3.000 pra rodar no mês com objetivo de vendas. Como você montaria as campanhas? Me leva pela estrutura.", ins: "Ideação estruturada na hora. Observe se define objetivo, público e criativo com coerência — e se reserva verba pra teste. Raciocínio importa mais que a resposta 'certa'." },
+            ]},
+            { t: "group", sec: "Ferramentas e aprendizado", qs: [
+              { q: "Qual atualização de plataforma mudou mais como você trabalha? Como você lidou?", ins: "Quem não cita nada específico reage às mudanças quando já chegam no trabalho, em vez de se antecipar." },
+              { q: "Já testou algo numa campanha por curiosidade — fora do combinado — e aprendeu com isso?", ins: "Mentalidade de experimentação. Gestor que só executa o combinado nunca encontra o que funciona de verdade." },
+            ]},
+          ],
+          pleno: [
+            { t: "group", sec: "Diagnóstico e otimização", qs: [
+              { q: "Uma conta que ia bem começa a piorar: o CPA subiu nas últimas duas semanas. Me leva pelo seu diagnóstico — o que você olha, e em que ordem?", ins: "Pensamento diagnóstico estruturado. Pleno bom separa criativo (fadiga), público (saturação), leilão (concorrência) e conversão (página/oferta). Quem só 'troca o criativo' não investiga a causa." },
+              { q: "Como você decide alocar verba entre campanhas? O que faz você mover budget de uma pra outra?", ins: "Revela critério de otimização. Resposta forte fala em eficiência por objetivo e janela de aprendizado, não em 'a que tá gastando menos'." },
+              { q: "Quais métricas você acompanha de verdade no dia a dia e quais você ignora? Por quê?", ins: "Separa quem entende métrica de quem olha vaidade. Resposta forte conecta métrica a etapa do funil e a objetivo de negócio (CPA/ROAS), não a impressão/curtida." },
+            ]},
+            { t: "group", sec: "Cenário prático — vendas x tráfego", qs: [
+              { q: "O time de vendas te diz que os leads que você trouxe não estão fechando. O que você faz nas próximas 48 horas?", ins: "Quem defende o próprio trabalho antes de investigar tem ego. Pleno bom vai pro diagnóstico conjunto: olha segmentação, oferta, qualificação e alinha o que é MQL com vendas — sem terceirizar a culpa." },
+            ]},
+            { t: "group", sec: "Criativo e funil", qs: [
+              { q: "Você já pediu mudança em copy ou criativo com base em dados? O que observou e o que pediu, exatamente?", ins: '"Exatamente" força resposta real. Quem conecta dado (CTR, hook rate, retenção) a um pedido concreto pro design tem uma habilidade rara e valiosa.' },
+              { q: "Qual a diferença real entre um lead e um MQL? Como você garante que o tráfego está trazendo o segundo?", ins: "Quem não articula isso está focado em volume, não qualidade. Gestor que pensa em MQL pensa junto com vendas." },
+            ]},
+          ],
+          senior: [
+            { t: "group", sec: "Estratégia e negócio", qs: [
+              { q: "Como você conecta a estratégia de mídia aos números de negócio — CAC, LTV, margem? Me dá um exemplo concreto de quando uma decisão sua de tráfego mexeu num desses.", ins: "Altitude estratégica. Sênior de verdade fala a língua do negócio, não só do gerenciador. Sem exemplo concreto, é sênior de tempo de casa, não de estratégia." },
+              { q: "Me conta de uma conta que você escalou mantendo eficiência: qual era o gargalo, o que você mudou e o resultado — com número.", ins: "Escalar sem estourar CPA é o que separa operador de estrategista. O número importa: quem lidera resultado mede impacto. Ficar vago aqui é red flag para o nível." },
+              { q: "Como você estrutura contas e estratégia de mídia para um cliente do zero? Você tem um framework?", ins: "Método próprio. Sênior tem um jeito estruturado (topo/meio/fundo, teste vs. escala, estrutura de campanhas), não improvisa caso a caso." },
+            ]},
+            { t: "group", sec: "Cenário prático — estratégia aplicada", qs: [
+              { q: "A CPV tem [defina a verba] por mês e quer crescer [leads qualificados / faturamento] em 6 meses. Como você estruturaria a operação de tráfego — canais, divisão de verba e como mediria sucesso?", ins: "Pensamento estratégico aplicado à nossa realidade. Observe se faz perguntas antes de responder (sinal de senioridade), se divide verba entre teste e escala com critério e se define métrica de sucesso desde o começo." },
+            ]},
+            { t: "group", sec: "Alocação e liderança", qs: [
+              { q: "Você precisa escolher: concentrar verba no canal que já performa, abrir um canal novo, ou investir em produção de criativo. Como você decide?", ins: "Trade-off de alocação. Não existe resposta certa — existe raciocínio. Sênior bom decide a partir do objetivo e do estágio do negócio, não por preferência pessoal." },
+              { q: "Como você forma e cobra um time de tráfego? Como você faz um gestor júnior evoluir de verdade — e como você alinha isso com vendas?", ins: "Liderança e desenvolvimento. Revela se sabe multiplicar resultado através de gente e integrar mídia com o funil comercial, ou se é um executor sênior que só entrega sozinho." },
+            ]},
+          ],
+        },
+        fim: [
+          { t: "group", sec: "Encerramento — perguntas finais obrigatórias", qs: [
+            { q: "Tem alguma pergunta sobre a empresa, a equipe ou o dia a dia aqui?", ins: "A qualidade das perguntas revela o nível de interesse real. Quem não tem nenhuma pergunta estava só de passagem." },
+            { q: "Tem algo que você queria ter falado e não teve oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
           ]},
-          { t: "group", sec: "Criativo e copy", qs: [
-            { q: "Me mostra — ou descreve — um anúncio que você considera muito bom. Por que aquele funciona?", ins: "Quem consegue desmontar em elementos (hook, proposta de valor, CTA, match com o funil) tem visão estratégica. Quem só diz 'é bonito' está na superfície." },
-            { q: "Você já pediu mudança em copy com base em dados? O que observou e o que pediu, exatamente?", ins: '"Exatamente" força resposta real. Quem conecta dado com criativo tem uma habilidade rara e muito valiosa.' },
-          ]},
-          { t: "group", sec: "Funil e MQL", qs: [
-            { q: "Qual é a diferença real entre um lead e um MQL? Como você garante que o tráfego está trazendo o segundo?", ins: "Quem não articula essa diferença está focado em volume, não qualidade. Gestor que pensa em MQL pensa junto com vendas." },
-            { q: "Se o time de vendas te disser que os leads não estão fechando, o que você faz?", ins: "Quem defende o próprio trabalho antes de investigar tem problema de ego. Quem vai direto para o diagnóstico conjunto tem mentalidade de resultado." },
-          ]},
-        ]
-      },
-      {
-        titulo: "Relações e colaboração", sub: "Como ele funciona em equipe",
-        blocks: [
-          { t: "group", sec: "Colaboração", qs: [
-            { q: "Quando você pede alteração de criativo para o design, como faz esse pedido? Me dá um exemplo real.", ins: 'Quem pede com dado ("o CTR caiu") vs. quem pede no feeling ("acho que pode melhorar") são profissionais em níveis completamente diferentes.' },
-            { q: "Já teve atrito com alguém de outra área sobre uma campanha? Me conta o que houve.", ins: "Observe se consegue narrar o conflito de forma madura — incluindo o que ela fez de errado. Habilidade relacional é tão importante quanto técnica." },
-            { q: "Já identificou um problema em uma conta antes de o cliente perceber? O que fez — e como comunicou?", ins: '"Como comunicou" é tão importante quanto o que fez. Proatividade sem comunicação clara não tem valor.' },
-          ]},
-        ]
-      },
-      {
-        titulo: "Encerramento", sub: "Perguntas finais + o que observar",
-        blocks: [
-          { t: "group", sec: "Perguntas finais obrigatórias", qs: [
-            { q: "Tem alguma pergunta sobre a empresa, a equipe ou o dia a dia aqui?", ins: "A qualidade das perguntas revela o nível de interesse real." },
-            { q: "Tem algo que você queria ter falado e não tivemos oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
-          ]},
+          { t: "nota", text: 'Observe o que acontece depois do "é isso, obrigado": como a pessoa se despede, como trata quem está na recepção. Caráter aparece quando a guarda baixa.' },
           { t: "obs", items: [
-            { titulo: "Como ela fala de ex-chefes e colegas", desc: "Culpa generalizada é sinal de alerta." },
-            { titulo: "Ela faz perguntas sobre você?", desc: "Curiosidade sobre o trabalho e a empresa é sinal de interesse real." },
-            { titulo: "Como ela admite erro", desc: "Busca contextos, não desculpas. Quem assume e aprende é quem você quer no time." },
+            { titulo: "Sabia o que a CPV faz?", desc: "Interesse real se prova no dever de casa. Quem chegou sem saber nada estava se candidatando a qualquer coisa." },
+            { titulo: "Provou competência ou só falou bonito?", desc: "Nos exemplos concretos e no cenário prático é que se vê o ofício. Boa lábia sem caso real e sem número é sinal de alerta." },
+            { titulo: "Como fala de ex-chefes, clientes e vendas", desc: "Culpa generalizada é red flag. Reconhecer o lado do outro mesmo em conflito é maturidade." },
+            { titulo: "Como admite erro", desc: "Busca contexto e aprendizado, não desculpa. Quem assume e evolui é quem você quer no time." },
           ]},
-        ]
+        ],
       },
     ]
   },
