@@ -107,69 +107,100 @@ const CARGOS = [
     ]
   },
   {
-    id: "designer", nome: "Designer", color: "#0891B2", cs: "#67E8F9", icon: "🎨",
+    id: "designer", nome: "Designer", color: "#0891B2", cs: "#67E8F9", icon: "🎨", usaNivel: true,
     etapas: [
       {
-        titulo: "Abertura", sub: "Script + aquecimento",
+        titulo: "1 · A empresa", sub: "Apresentação da CPV + verificação de interesse · ~8 min",
         blocks: [
-          { t: "script", text: '"Antes de começar, quero que saiba que não existe resposta certa aqui. O portfólio a gente já viu — aqui eu quero entender quem você é como designer: como você pensa, como você resolve, como você se comporta quando o projeto complica. Pode ficar à vontade."' },
-          { t: "nota", text: "O portfólio já foi avaliado. Aqui você investiga processo, maturidade e identidade profissional. O que você busca não é o designer mais talentoso — é quem pensa com clareza, entrega com consistência e cresce com feedback." },
-          { t: "group", sec: "Aquecimento", qs: [
-            { q: "Me conta sobre você além do portfólio — o que te move como designer?", ins: "A resposta revela identidade profissional. Quem fala de resolver problemas tem maturidade diferente de quem fala de fazer coisas bonitas. Nenhum é errado — mas dizem muito sobre o que vai motivar essa pessoa no dia a dia.", fu: 'Se falar só de estética: "E quando te pedem algo que você acha feio mas que funciona — como você lida?"' },
-            { q: "Quando você olha para o seu trabalho, o que te dá mais orgulho — a estética, a solução ou o processo?", ins: "Não existe resposta certa. O que você observa é a coerência entre o que a pessoa valoriza e o tipo de trabalho que vai encontrar aqui. Designer que valoriza só estética vai frustrar em ambiente orientado a resultado." },
+          { t: "script", text: '"Bom te ter aqui. A conversa leva uns 40 minutos, em três partes: primeiro eu te apresento a CPV e entendo o que te trouxe até aqui, depois quero te conhecer de verdade — sua história e seu jeito — e no fim a gente entra na parte técnica de design. O portfólio a gente já viu, então aqui o foco é como você pensa. Não existe resposta certa ou errada. Fica à vontade."' },
+          { t: "group", sec: "Verificação de interesse — antes de você apresentar a empresa", qs: [
+            { q: "Antes de eu te apresentar a CPV, me conta: o que você já sabe sobre o que a gente faz aqui?", ins: "Separa quem pesquisou de quem se candidatou a tudo. Interesse real aparece nos detalhes concretos que a pessoa cita. Chegar sem saber nada é um dado — não elimina sozinho, mas revela o esforço.", fu: "O que te fez querer trabalhar justamente com design nesse tipo de negócio?" },
+            { q: "Como você chegou até essa vaga? O que te chamou atenção nela especificamente?", ins: "Quem tem intenção aponta algo específico da vaga ou da empresa. Quem responde no genérico ('tava procurando oportunidade') está no modo aplicar-em-tudo." },
+          ]},
+          { t: "nota", text: "Agora apresente a CPV com clareza: o que é, o que faz, o momento do negócio e onde design entra nisso — servindo social media, tráfego e o material comercial. Enquanto fala, observe — a pessoa conecta o que você diz com o que ela já mencionou? Faz perguntas? Anota? Engajamento aqui é sinal de interesse real." },
+          { t: "group", sec: "Fit com o momento", qs: [
+            { q: "Depois do que te expliquei, o que mais faz sentido pra você nesse trabalho? E o que te preocupa, ou o que você acha que seria seu maior desafio aqui?", ins: "A parte da preocupação é a mais reveladora: quem responde com honestidade tem autoconsciência; quem diz 'nada, tá tudo perfeito' está performando ou não pensou a sério sobre a vaga." },
           ]},
         ]
       },
       {
-        titulo: "Criatividade e processo", sub: "Como ela pensa e começa",
+        titulo: "2 · A pessoa", sub: "História, trajetória e perfil · ~14 min",
         blocks: [
-          { t: "group", sec: "Processo criativo", qs: [
-            { q: "Me descreve como você começa um projeto do zero. O que acontece antes de abrir o Figma?", ins: "Quem tem processo descreve com clareza: leitura do briefing, referências, rascunho, alinhamento. Quem abre o Figma antes de ter clareza do problema vai iterar por tentativa e erro — e gerar retrabalho.", fu: "E quando o briefing chega incompleto — você começa assim mesmo ou espera até ter as respostas que precisa?" },
-            { q: "Já teve um briefing muito aberto, sem referências nem direção clara? Como você lidou?", ins: "Testa tolerância à ambiguidade. Designer que paralisa diante do vazio depende de briefing perfeito para entregar. Quem cria processo próprio para organizar o vazio tem maturidade criativa." },
-            { q: "Me mostra — ou descreve — uma peça que representa bem o seu jeito de trabalhar. Por que essa?", ins: "A escolha diz tanto quanto a explicação. Quem escolhe pelo impacto que gerou vale mais do que quem escolhe pela peça mais bonita. O 'por quê' revela o que a pessoa valoriza no próprio trabalho.", fu: "E uma peça que você não mostraria no portfólio mas que aprendeu muito fazendo?" },
+          { t: "group", sec: "Trajetória", qs: [
+            { q: "Me conta sua história — de onde você veio e como o design entrou na sua vida. Foi escolha ou aconteceu?", ins: "Quem escolheu ativamente tende a ter mais comprometimento e identidade profissional formada. Observe se fala de resolver problemas ou só de fazer coisas bonitas — os dois são válidos, mas dizem coisas diferentes sobre o que vai motivar essa pessoa no dia a dia.", fu: "Se ficar só no profissional: 'E fora do trabalho, o que te define?'" },
+            { q: "Qual experiência profissional mais te formou até hoje? Por quê ela, e não outra?", ins: "Quem aprende extrai lição de experiências específicas. A escolha e o motivo mostram o que a pessoa valoriza — resultado, aprendizado, relação, superação." },
+            { q: "Me mostra — ou descreve — uma peça do portfólio que representa bem o seu jeito de trabalhar. Por que essa, e qual foi seu papel exato nela?", ins: "\"Papel exato\" força a separar o que foi dela do que foi do time. A escolha diz tanto quanto a explicação: quem escolhe pelo impacto que gerou vale mais do que quem escolhe pela peça mais bonita.", fu: "E uma peça que você não mostraria no portfólio mas que aprendeu muito fazendo?" },
+          ]},
+          { t: "group", sec: "Autoconhecimento — qualidades e defeitos", qs: [
+            { q: "Se eu ligasse agora pra alguém que trabalhou de perto com você, quais duas forças ela citaria na hora? E qual defeito citaria primeiro?", ins: "Enquadrar pelos olhos do outro derruba a resposta ensaiada de 'meu defeito é ser perfeccionista'. Quem tem autoconsciência responde o defeito sem sofrer; quem trava ou maquia mostra pouca maturidade.", fu: "E você concorda com esse defeito? O que já fez a respeito dele?" },
+            { q: "Qual crítica você já recebeu mais de uma vez na vida — de pessoas diferentes?", ins: "Crítica recorrente aponta ponto cego real, não episódio isolado. O valor está no que a pessoa fez com ela: ignorou, racionalizou ou trabalhou de verdade." },
+            { q: "Em que tipo de ambiente e rotina você rende o seu melhor — e em qual você murcha?", ins: "Fit de perfil puro. Compare a resposta com a realidade do dia a dia da CPV. Ninguém rende em tudo; quem se conhece sabe onde brilha e onde sofre." },
           ]},
         ]
       },
       {
-        titulo: "Ownership e entrega", sub: "Responsabilidade + adaptação",
-        blocks: [
-          { t: "group", sec: "Responsabilidade", qs: [
-            { q: "Já foi responsável por um projeto de ponta a ponta — do briefing à entrega final? Me conta como foi.", ins: "Separa quem executou peças de quem pensou o todo. Quem teve ownership real sabe descrever os problemas que apareceram no meio e como resolveu — não só o resultado.", fu: "Teve um momento em que você precisou tomar uma decisão criativa sozinho, sem aprovação? O que fez?" },
-            { q: "Como você garante qualidade quando tem muitas entregas ao mesmo tempo?", ins: "Quem tem processo de priorização descreve com precisão. Quem diz 'trabalho mais horas' não tem sistema — tem esforço. E esforço sem sistema não escala." },
-          ]},
-          { t: "group", sec: "Adaptação e feedback", qs: [
-            { q: "Me conta de um projeto que sofreu muitas revisões. Como você se sentiu e como conduziu?", ins: "Não busca quem nunca frustrou — busca quem processa a frustração sem deixar o ego contaminar a entrega. Quem narra a situação com maturidade, incluindo o que fez diferente, tem o perfil certo.", fu: "Em algum momento você entendeu por que as revisões eram necessárias — ou ficou no 'o cliente não entende'?" },
-            { q: "Como você reage quando o cliente ou gestor pede algo que você acha que vai prejudicar o resultado?", ins: "Designer com ego inflado defende a visão acima do resultado. Designer sem ego entrega sem questionar. O que você quer é quem argumenta com contexto e aceita quando o outro tem razão." },
-          ]},
-        ]
-      },
-      {
-        titulo: "Colaboração e fit", sub: "Time + ambiente",
-        blocks: [
-          { t: "group", sec: "Colaboração", qs: [
-            { q: "Como você apresenta suas ideias para pessoas que não são da área criativa?", ins: "Quem traduz a lógica criativa para negócio — 'fiz assim porque quero que o olho vá para cá, o que aumenta a chance de clicar' — tem habilidade rara. Quem espera que o outro 'entenda o design' vai frustrar sempre." },
-            { q: "Já trabalhou com Social Media ou tráfego para alinhar uma campanha? Como foi?", ins: "Para CPV especificamente, designer não trabalha isolado. Observe se a pessoa entende que o criativo serve o resultado — e não só o portfólio." },
-          ]},
-          { t: "group", sec: "Fit cultural", qs: [
-            { q: "O que te faz querer crescer dentro de um lugar — e não só passar por ele?", ins: "Quem responde com clareza sabe o que quer. Quem é vago ainda não parou para pensar nisso. Compare a resposta com o que você pode oferecer — e seja honesto se não tem match." },
-            { q: "Que tipo de ambiente tira o melhor de você criativamente?", ins: "A resposta revela o que a pessoa precisa para performar. Não existe certo ou errado — existe compatibilidade com a cultura que vocês têm." },
-          ]},
-        ]
-      },
-      {
-        titulo: "Encerramento", sub: "Perguntas finais + o que observar",
-        blocks: [
-          { t: "group", sec: "Perguntas finais obrigatórias", qs: [
+        titulo: "3 · Técnica", sub: "Competência de design · ~16 min · adapta ao nível",
+        intro: [
+          { t: "nota", text: "Selecione o nível da vaga no topo (Júnior / Pleno / Sênior) — as perguntas técnicas abaixo se ajustam. O portfólio já foi avaliado; o objetivo aqui é entender processo, maturidade e como a pessoa se comporta quando o projeto complica. Puxe exemplos concretos: 'me dá um caso real', 'o que você fez exatamente'." },
+          { t: "alerta", text: 'Não exija a peça mais bonita — exija raciocínio coerente e honestidade sobre o que não sabe. Quem diz "não sei, mas eu pensaria assim..." tem mais valor do que quem enrola.' },
+        ],
+        porNivel: {
+          junior: [
+            { t: "group", sec: "Fundamentos", qs: [
+              { q: "Me descreve como você começa uma peça do zero. O que acontece antes de abrir o Figma?", ins: "Quem tem processo descreve com clareza: leitura do briefing, referência, rascunho. Quem abre o Figma antes de ter clareza do problema vai iterar por tentativa e erro — e gerar retrabalho.", fu: "E quando o briefing chega incompleto — você começa assim mesmo ou pergunta antes?" },
+              { q: "Você abre um perfil ou site de uma marca que nunca viu. Em 30 segundos, o que você olha pra decidir se o design dela é bom ou fraco?", ins: "Revela critério estético e de hierarquia visual. Quem tem olho aponta consistência, legibilidade, contraste, identidade. Quem não tem fala só 'gostei' ou 'achei bonito'." },
+              { q: "Já recebeu uma crítica ou pedido de alteração que você achou que piorava a peça? O que você fez?", ins: "Testa maturidade com feedback logo na base. Júnior com ego inflado defende a própria visão sem contexto; júnior maduro pergunta o porquê antes de discordar." },
+            ]},
+            { t: "group", sec: "Cenário prático", qs: [
+              { q: "Vou te dar uma marca — [ex: um restaurante local, ou a própria CPV]. Me fala como você pensaria a peça pra redes sociais dela, do briefing ao rascunho.", ins: "O teste mais honesto de um júnior: raciocínio cru na hora. Observe se pensa em objetivo e público antes de estética. Repertório e raciocínio importam mais que polimento." },
+            ]},
+            { t: "group", sec: "Ferramentas e repertório", qs: [
+              { q: "Que ferramentas você usa no dia a dia — Figma, Illustrator, Photoshop? Como você aprendeu a usar?", ins: "Mapeia o toolkit e, mais importante, se é autodidata. Júnior que aprende sozinho compensa a falta de experiência rápido." },
+              { q: "Que designer ou marca faz um trabalho excepcional hoje, na sua opinião? O que exatamente ela faz bem?", ins: "A referência escolhida e a precisão da análise revelam o repertório. 'Gosto de vários' é resposta de quem consome sem estudar." },
+            ]},
+          ],
+          pleno: [
+            { t: "group", sec: "Processo e autonomia", qs: [
+              { q: "Já teve um briefing muito aberto, sem referência nem direção clara? Como você lidou?", ins: "Testa tolerância à ambiguidade. Designer que paralisa diante do vazio depende de briefing perfeito para entregar. Quem cria processo próprio para organizar o vazio tem maturidade criativa." },
+              { q: "Já foi responsável por uma peça ou campanha de ponta a ponta — do briefing à entrega final? Me conta como foi.", ins: "Separa quem executou peças de quem pensou o todo. Quem teve ownership real sabe descrever os problemas que apareceram no meio e como resolveu — não só o resultado.", fu: "Teve um momento em que você precisou tomar uma decisão criativa sozinho, sem aprovação? O que fez?" },
+              { q: "Como você garante qualidade quando tem muitas entregas ao mesmo tempo?", ins: "Quem tem processo de priorização descreve com precisão. Quem diz 'trabalho mais horas' não tem sistema — tem esforço. E esforço sem sistema não escala." },
+            ]},
+            { t: "group", sec: "Cenário prático — crítica", qs: [
+              { q: "Vou te mostrar (ou descrever) uma peça real. Em 2 minutos: o que está funcionando, o que você mudaria e o que faria diferente — nessa ordem de prioridade.", ins: "Olho crítico + priorização. Pleno bom não lista tudo que vê; ele hierarquiza o que dá mais retorno mexer primeiro." },
+            ]},
+            { t: "group", sec: "Colaboração e resultado", qs: [
+              { q: "Como você apresenta suas ideias para pessoas que não são da área criativa?", ins: "Quem traduz a lógica criativa para negócio — 'fiz assim porque quero que o olho vá para cá, o que aumenta a chance de clicar' — tem habilidade rara. Quem espera que o outro 'entenda o design' vai frustrar sempre." },
+              { q: "Já trabalhou lado a lado com social media ou tráfego pra alinhar uma campanha? Como foi?", ins: "Para CPV especificamente, designer não trabalha isolado. Observe se a pessoa entende que o criativo serve o resultado — e não só o portfólio." },
+            ]},
+          ],
+          senior: [
+            { t: "group", sec: "Estratégia e sistema", qs: [
+              { q: "Como você conecta as decisões de design aos objetivos de negócio da empresa? Me dá um exemplo concreto de quando fez exatamente isso.", ins: "Altitude estratégica. Sênior de verdade fala em objetivo de negócio, não em peça bonita. Sem exemplo concreto, é sênior de tempo de casa, não de estratégia." },
+              { q: "Me conta de uma vez em que você estruturou ou reformulou uma identidade visual do zero. Qual era o cenário, o que você definiu e qual foi o resultado — com número, se tiver.", ins: "Ownership de resultado. O número importa quando existe: quem lidera estratégia mede impacto. Ficar vago aqui é red flag para o nível." },
+              { q: "Você tem um framework ou processo próprio pra manter consistência visual quando várias pessoas produzem peças ao mesmo tempo?", ins: "Método próprio e pensamento de sistema. Sênior tem um jeito estruturado (guidelines, design system, revisão), não improvisa caso a caso." },
+            ]},
+            { t: "group", sec: "Cenário prático — estratégia aplicada", qs: [
+              { q: "A CPV quer elevar o padrão visual de tudo que produz nos próximos 6 meses — social, comercial, apresentações. Me esboça como você estruturaria isso: prioridades, processo e como mediria se funcionou.", ins: "Pensamento estratégico aplicado à nossa realidade. Observe se faz perguntas antes de responder (sinal de senioridade), se prioriza com critério e se define o que significa 'funcionou' desde o começo." },
+            ]},
+            { t: "group", sec: "Alocação e liderança", qs: [
+              { q: "Você tem tempo limitado e precisa escolher: mais volume de peças, subir a qualidade da produção, ou investir em construir um design system. Como você decide?", ins: "Trade-off de alocação. Não existe resposta certa — existe raciocínio. Sênior bom decide a partir do objetivo e do estágio da marca, não por preferência pessoal." },
+              { q: "Como você forma e dá feedback pra um designer júnior? Como você faz alguém evoluir de verdade?", ins: "Liderança e desenvolvimento. Revela se sabe multiplicar resultado através de gente ou se é um executor sênior que só entrega sozinho." },
+            ]},
+          ],
+        },
+        fim: [
+          { t: "group", sec: "Encerramento — perguntas finais obrigatórias", qs: [
             { q: "Tem alguma pergunta sobre a empresa, a equipe ou o dia a dia aqui?", ins: "A qualidade das perguntas revela o nível de interesse real. Quem não tem nenhuma pergunta estava só de passagem." },
-            { q: "Tem algo que você queria ter falado e não tivemos oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
+            { q: "Tem algo que você queria ter falado e não teve oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
           ]},
-          { t: "nota", text: 'Observe o que acontece depois do "é isso, obrigado". Como a pessoa se despede. Caráter aparece quando a guarda baixa.' },
+          { t: "nota", text: 'Observe o que acontece depois do "é isso, obrigado": como a pessoa se despede, como trata quem está na recepção. Caráter aparece quando a guarda baixa.' },
           { t: "obs", items: [
             { titulo: "Como ela fala do próprio trabalho", desc: "Orgulho excessivo sem autocrítica é sinal de alerta. Quem aponta o que melhoraria numa peça própria revela maturidade." },
-            { titulo: "Ela faz perguntas sobre o trabalho e a equipe?", desc: "Curiosidade genuína sobre com quem vai trabalhar e o que vai fazer é sinal de interesse real." },
+            { titulo: "Provou processo ou só falou bonito?", desc: "No cenário prático é que se vê o ofício. Boa lábia sem raciocínio concreto é sinal de alerta." },
             { titulo: "Como ela reage à palavra 'revisão'", desc: "Observe o tom. Quem tensa ao ouvir revisão vai criar atrito. Quem entende revisão como parte do processo tem maturidade." },
+            { titulo: "Como admite erro", desc: "Busca contexto e aprendizado, não desculpa. Quem assume e evolui é quem você quer no time." },
           ]},
-        ]
+        ],
       },
     ]
   },
@@ -272,138 +303,195 @@ const CARGOS = [
     ]
   },
   {
-    id: "sdr", nome: "SDR", color: "#7C3AED", cs: "#A78BFA", icon: "📞",
+    id: "sdr", nome: "SDR", color: "#7C3AED", cs: "#A78BFA", icon: "📞", usaNivel: true,
     etapas: [
       {
-        titulo: "Abertura", sub: "Script + aquecimento",
+        titulo: "1 · A empresa", sub: "Apresentação da CPV + verificação de interesse · ~8 min",
         blocks: [
-          { t: "script", text: '"Antes de começar, quero deixar claro: não existe resposta certa aqui. Quero entender como você pensa, o que te move e como você age quando as coisas não vão bem. SDR bom não é quem fala bonito — é quem insiste do jeito certo e sabe quando parar. Pode ficar à vontade."' },
-          { t: "nota", text: "Você está procurando SDR Inbound com vontade de vencer. Isso não aparece no currículo — aparece em como a pessoa fala de meta, de rejeição, de número. Observe o que ela rastreia, o que a move e o que a paralisa." },
-          { t: "group", sec: "Aquecimento", qs: [
-            { q: "Me conta sobre você — não o currículo. O que te move?", ins: "Quem fala de conquistas está em modo performance. Quem revela o que genuinamente importa pra ela está sendo real. O que a faz segurar numa semana difícil?", fu: 'Se citar só realizações: "E o que você faria mesmo que ninguém soubesse ou pagasse?"' },
-            { q: "O que você sabia sobre a CPV antes de se candidatar? Como você chegou até aqui?", ins: "Separa quem se candidatou a tudo de quem veio com intenção. Interesse genuíno aparece nos detalhes que a pessoa menciona sobre o que a empresa faz." },
+          { t: "script", text: '"Bom te ter aqui. A conversa leva uns 40 minutos, em três partes: primeiro eu te apresento a CPV e entendo o que te trouxe até aqui, depois quero te conhecer de verdade — sua história e seu jeito — e no fim a gente entra na parte técnica de qualificação de leads. Não existe resposta certa ou errada. Fica à vontade."' },
+          { t: "group", sec: "Verificação de interesse — antes de você apresentar a empresa", qs: [
+            { q: "Antes de eu te apresentar a CPV, me conta: o que você já sabe sobre o que a gente faz aqui?", ins: "Separa quem pesquisou de quem se candidatou a tudo. Interesse real aparece nos detalhes concretos que a pessoa cita. Chegar sem saber nada é um dado — não elimina sozinho, mas revela o esforço.", fu: "O que te fez querer trabalhar justamente com vendas/qualificação?" },
+            { q: "Como você chegou até essa vaga? O que te chamou atenção nela especificamente?", ins: "Quem tem intenção aponta algo específico da vaga ou da empresa. Quem responde no genérico ('tava procurando oportunidade') está no modo aplicar-em-tudo." },
+          ]},
+          { t: "nota", text: "Agora apresente a CPV com clareza: o que é, o que faz, o momento do negócio e onde o SDR entra no funil — recebendo o lead inbound e entregando pro closer. Enquanto fala, observe — a pessoa conecta o que você diz com o que ela já mencionou? Faz perguntas? Anota? Engajamento aqui é sinal de interesse real." },
+          { t: "group", sec: "Fit com o momento", qs: [
+            { q: "Depois do que te expliquei, o que mais faz sentido pra você nesse trabalho? E o que te preocupa, ou o que você acha que seria seu maior desafio aqui?", ins: "A parte da preocupação é a mais reveladora: quem responde com honestidade tem autoconsciência; quem diz 'nada, tá tudo perfeito' está performando ou não pensou a sério sobre a vaga." },
           ]},
         ]
       },
       {
-        titulo: "Ambição e drive", sub: "O motor interno que busca resultado",
+        titulo: "2 · A pessoa", sub: "História, trajetória e perfil · ~14 min",
         blocks: [
-          { t: "nota", text: "Esta etapa revela se a motivação é interna ou externa. SDR com motor interno sustenta performance sem supervisão constante. Quem precisa de pressão para funcionar não escala." },
-          { t: "group", sec: "Vontade de vencer", qs: [
-            { q: "Você acompanha suas próprias métricas — taxa de conexão, conversão, velocidade de primeiro contato? Me fala seus números.", ins: "Quem tem vontade de vencer conhece os próprios números de cabeça. Não precisa ser exato — o que revela é se a pessoa rastreia ou não. Executor passivo não acompanha.", fu: "Qual desses números você mais quer melhorar agora? Por quê?" },
-            { q: "Você é competitivo? Me dá um exemplo — pode ser fora do trabalho.", ins: "Competitividade saudável não é ego. É querer se superar. Quem não consegue dar nenhum exemplo provavelmente não tem esse drive. Observe: a competição é contra si mesmo ou sempre contra o outro?" },
+          { t: "group", sec: "Trajetória", qs: [
+            { q: "Me conta sua história — de onde você veio e como as vendas entraram na sua vida. Foi escolha ou aconteceu?", ins: "Quem escolheu ativamente tende a ter mais comprometimento. Observe se criou identidade com a área ou ainda está passando por ela.", fu: 'Se ficar só no profissional: "E fora do trabalho, o que te define?"' },
+            { q: "Qual experiência profissional mais te formou até hoje? Por quê ela, e não outra?", ins: "Quem aprende extrai lição de experiências específicas. A escolha e o motivo mostram o que a pessoa valoriza — resultado, aprendizado, relação, superação." },
             { q: "Me conta um momento em que você estava atrás da meta e virou o jogo — ou chegou perto o suficiente para se orgulhar. O que fez diferente?", ins: "Não é sobre ter virado sempre. É sobre o que a pessoa fez quando estava em desvantagem. Quem improvisa, busca ajuda e muda abordagem tem o comportamento certo." },
           ]},
+          { t: "group", sec: "Autoconhecimento — qualidades e defeitos", qs: [
+            { q: "Se eu ligasse agora pra alguém que trabalhou de perto com você, quais duas forças ela citaria na hora? E qual defeito citaria primeiro?", ins: "Enquadrar pelos olhos do outro derruba a resposta ensaiada de 'meu defeito é ser perfeccionista'. Quem tem autoconsciência responde o defeito sem sofrer; quem trava ou maquia mostra pouca maturidade.", fu: "E você concorda com esse defeito? O que já fez a respeito dele?" },
+            { q: "Me descreve a semana mais difícil que você teve em vendas. O que estava acontecendo, e o que você fez na segunda-feira seguinte?", ins: "Não busca quem nunca quebrou — busca quem quebrou e voltou. Honestidade sobre como o emocional foi afetado vale mais do que 'nada me abala'. O que importa é o que a pessoa fez depois." },
+            { q: "Em que tipo de ambiente e rotina você rende o seu melhor — e em qual você murcha?", ins: "Fit de perfil puro. Compare a resposta com a realidade do dia a dia da CPV. Ninguém rende em tudo; quem se conhece sabe onde brilha e onde sofre." },
+          ]},
         ]
       },
       {
-        titulo: "Qualificação inbound", sub: "Velocidade, critério e handoff",
-        blocks: [
+        titulo: "3 · Técnica", sub: "Competência de qualificação · ~16 min · adapta ao nível",
+        intro: [
+          { t: "nota", text: "Selecione o nível da vaga no topo (Júnior / Pleno / Sênior) — as perguntas técnicas abaixo se ajustam. Você está procurando SDR Inbound com vontade de vencer — isso não aparece no currículo, aparece em como a pessoa fala de meta, de rejeição, de número." },
           { t: "alerta", text: "SDR Inbound lida com leads que já demonstraram interesse. O erro mais comum não é a abordagem — é deixar o lead esfriar, avançar quem não tem perfil ou entregar lead mal qualificado para o closer." },
-          { t: "group", sec: "Urgência e qualificação", qs: [
-            { q: "Um lead entrou pelo site agora. Quanto tempo você tem para fazer o primeiro contato? Por quê?", ins: "Não existe resposta exata, mas quem responde com urgência ('minutos', 'o mais rápido possível') entende que inbound esfria rápido. Quem diz 'quando possível' não entende a janela de oportunidade.", fu: "E se for final de tarde, quase fora do horário comercial — o que você faz?" },
-            { q: "Como você decide em menos de 5 minutos de conversa se um lead vale avançar? Me descreve as perguntas que você faz.", ins: "Quem qualifica com critério claro — perfil, urgência, autoridade, orçamento — pensa estrategicamente. Quem avança qualquer lead 'para o closer decidir' está terceirizando o trabalho." },
-            { q: "Já recebeu um lead muito interessado mas que claramente não tinha perfil. O que fez?", ins: "Disqualificação é uma habilidade. Quem não consegue encerrar gentilmente perde tempo e prejudica o closer. Quem sabe dizer 'não agora' com clareza e sem constranger é valioso." },
+          { t: "group", sec: "Vontade de vencer — motor interno", qs: [
+            { q: "Você acompanha suas próprias métricas — taxa de conexão, conversão, velocidade de primeiro contato? Me fala seus números.", ins: "Quem tem vontade de vencer conhece os próprios números de cabeça. Não precisa ser exato — o que revela é se a pessoa rastreia ou não. Executor passivo não acompanha.", fu: "Qual desses números você mais quer melhorar agora? Por quê?" },
+            { q: "Você é competitivo? Me dá um exemplo — pode ser fora do trabalho.", ins: "Competitividade saudável não é ego. É querer se superar. Quem não consegue dar nenhum exemplo provavelmente não tem esse drive. Observe: a competição é contra si mesmo ou sempre contra o outro?" },
           ]},
-          { t: "group", sec: "Handoff", qs: [
-            { q: "Como você passa um lead qualificado para o closer? Me descreve o que você entrega — além do nome e telefone.", ins: "SDR que entrega lead como número prejudica o time. Quem pensa no que o closer precisa saber — contexto, dor, urgência, o que foi dito — está pensando em resultado." },
-          ]},
-        ]
-      },
-      {
-        titulo: "Resiliência e aprendizado", sub: "Como ela lida com pressão e evolui",
-        blocks: [
-          { t: "group", sec: "Resiliência", qs: [
-            { q: "Me descreve a semana mais difícil que você teve em vendas. O que estava acontecendo? Como ficou seu humor?", ins: "Não busca quem nunca quebrou — busca quem quebrou e voltou. Honestidade sobre como o emocional foi afetado vale mais do que 'nada me abala'. O que importa é o que a pessoa fez no dia seguinte.", fu: "E o que você fez na segunda-feira depois?" },
-            { q: "Quando você percebe que não vai bater a meta do mês, o que você faz? Seja específico.", ins: "Quem escondeu tem problema de caráter. Quem comunicou, ajustou abordagem e pediu ajuda tem o comportamento certo. 'Trabalho mais' sem detalhe é resposta vaga." },
-          ]},
-          { t: "group", sec: "Aprendizado tático", qs: [
-            { q: "Quando uma abordagem não está convertendo, quanto tempo você leva para mudar? Me conta um exemplo real.", ins: "SDR que não itera fica preso no mesmo script. Quem testa, mede e ajusta rápido tem o ciclo que gera evolução. Quem espera o gestor dizer que não está funcionando é reativo." },
-            { q: "O que você mudou na sua abordagem nos últimos dois meses? O que levou a essa mudança?", ins: '"Dois meses" força resposta recente e real. Quem estuda e aplica responde sem hesitar. Quem é vago ou não lembra nada aprende por acidente, não por intenção.' },
-          ]},
-        ]
-      },
-      {
-        titulo: "Encerramento", sub: "Perguntas finais + o que observar",
-        blocks: [
-          { t: "group", sec: "Perguntas finais obrigatórias", qs: [
+        ],
+        porNivel: {
+          junior: [
+            { t: "group", sec: "Fundamentos de qualificação", qs: [
+              { q: "Um lead entrou pelo site agora. Quanto tempo você tem para fazer o primeiro contato? Por quê?", ins: "Não existe resposta exata, mas quem responde com urgência ('minutos', 'o mais rápido possível') entende que inbound esfria rápido. Quem diz 'quando possível' não entende a janela de oportunidade.", fu: "E se for final de tarde, quase fora do horário comercial — o que você faz?" },
+              { q: "Como você decide se um lead vale avançar? Me descreve as perguntas básicas que você faz.", ins: "Testa se entende que qualificar é mais que 'confirmar interesse'. Júnior bom já pergunta por perfil e urgência; quem só confirma que a pessoa 'quer saber mais' vai empurrar lead ruim pro closer." },
+              { q: "Quando uma ligação ou mensagem não é respondida, o que você faz depois?", ins: "Revela se tem cadência mínima de follow-up ou desiste no primeiro não-atendimento. Quem só tenta uma vez perde lead que só precisava de outro horário." },
+            ]},
+            { t: "group", sec: "Cenário prático", qs: [
+              { q: "Vamos simular: eu sou um lead que acabou de preencher o formulário do site. Me liga agora — como você abriria essa conversa?", ins: "O teste mais honesto de um júnior: abertura na hora, sem decorar. Observe se personaliza com o que o lead preencheu ou usa script genérico de vendedor." },
+            ]},
+            { t: "group", sec: "Ferramentas e organização", qs: [
+              { q: "Como você registra e organiza seus leads no dia a dia? Já usou algum CRM?", ins: "Mapeia o toolkit e a disciplina de registro. Júnior que documenta tudo, mesmo sem CRM sofisticado, escala rápido; quem confia na memória perde lead." },
+            ]},
+          ],
+          pleno: [
+            { t: "group", sec: "Qualificação e critério", qs: [
+              { q: "Como você decide em menos de 5 minutos de conversa se um lead vale avançar? Me descreve as perguntas que você faz.", ins: "Quem qualifica com critério claro — perfil, urgência, autoridade, orçamento — pensa estrategicamente. Quem avança qualquer lead 'para o closer decidir' está terceirizando o trabalho." },
+              { q: "Já recebeu um lead muito interessado mas que claramente não tinha perfil. O que fez?", ins: "Disqualificação é uma habilidade. Quem não consegue encerrar gentilmente perde tempo e prejudica o closer. Quem sabe dizer 'não agora' com clareza e sem constranger é valioso." },
+              { q: "Como você passa um lead qualificado para o closer? Me descreve o que você entrega — além do nome e telefone.", ins: "SDR que entrega lead como número prejudica o time. Quem pensa no que o closer precisa saber — contexto, dor, urgência, o que foi dito — está pensando em resultado." },
+            ]},
+            { t: "group", sec: "Cenário prático — alinhamento com vendas", qs: [
+              { q: "O closer te diz que os leads que você passou nas últimas semanas não estão fechando. O que você faz nas próximas 48 horas?", ins: "Quem defende o próprio trabalho antes de investigar tem ego. Pleno bom vai pro diagnóstico conjunto: revê critério de qualificação, escuta o closer e ajusta — sem terceirizar a culpa." },
+            ]},
+            { t: "group", sec: "Resiliência tática", qs: [
+              { q: "Quando uma abordagem não está convertendo, quanto tempo você leva para mudar? Me conta um exemplo real.", ins: "SDR que não itera fica preso no mesmo script. Quem testa, mede e ajusta rápido tem o ciclo que gera evolução. Quem espera o gestor dizer que não está funcionando é reativo." },
+              { q: "O que você mudou na sua abordagem nos últimos dois meses? O que levou a essa mudança?", ins: '"Dois meses" força resposta recente e real. Quem estuda e aplica responde sem hesitar. Quem é vago ou não lembra nada aprende por acidente, não por intenção.' },
+            ]},
+          ],
+          senior: [
+            { t: "group", sec: "Estratégia e playbook", qs: [
+              { q: "Como você conecta as métricas de SDR ao pipeline e à receita? Me dá um exemplo concreto de quando uma mudança sua no processo de qualificação mexeu num desses números.", ins: "Altitude estratégica. Sênior de verdade fala a língua do negócio, não só de ligação feita. Sem exemplo concreto, é sênior de tempo de casa, não de estratégia." },
+              { q: "Me conta de uma vez em que você reformulou o processo ou o playbook de qualificação: qual era o problema, o que você mudou e o resultado — com número.", ins: "Ownership de resultado. O número importa: quem lidera processo mede impacto. Ficar vago aqui é red flag para o nível." },
+              { q: "Você tem um framework próprio pra priorizar e qualificar leads quando o volume é alto?", ins: "Método próprio. Sênior tem um jeito estruturado de decidir o que atacar primeiro, não improvisa caso a caso." },
+            ]},
+            { t: "group", sec: "Cenário prático — estratégia aplicada", qs: [
+              { q: "A CPV quer dobrar o volume de leads inbound nos próximos 6 meses sem perder qualidade de qualificação. Como você estruturaria a operação de SDR — processo, critério e como mediria sucesso?", ins: "Pensamento estratégico aplicado à nossa realidade. Observe se faz perguntas antes de responder (sinal de senioridade), se define critério de qualidade além de volume e se define métrica de sucesso desde o começo." },
+            ]},
+            { t: "group", sec: "Liderança e mentoria", qs: [
+              { q: "Como você forma e cobra um time de SDR? Como você faz alguém júnior evoluir de verdade?", ins: "Liderança e desenvolvimento. Revela se sabe multiplicar resultado através de gente ou se é um executor sênior que só entrega sozinho." },
+              { q: "Como você se alinha com marketing pra melhorar a qualidade do lead já na origem, antes dele chegar até o SDR?", ins: "Visão de funil completo. Sênior bom não trata o problema só no seu pedaço — influencia a qualidade rio acima." },
+            ]},
+          ],
+        },
+        fim: [
+          { t: "group", sec: "Encerramento — perguntas finais obrigatórias", qs: [
             { q: "Tem alguma pergunta sobre a empresa, a equipe ou o dia a dia aqui?", ins: "A qualidade das perguntas revela o nível de interesse real. Quem não tem nenhuma pergunta estava só de passagem." },
-            { q: "Tem algo que você queria ter falado e não tivemos oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
+            { q: "Tem algo que você queria ter falado e não teve oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
           ]},
           { t: "nota", text: 'Observe o que acontece depois do "é isso, obrigado". Como a pessoa se despede. Caráter aparece quando a guarda baixa.' },
           { t: "obs", items: [
             { titulo: "Ela fala dos próprios números com naturalidade?", desc: "SDR com vontade de vencer conhece suas métricas. Quem não sabe é executor passivo." },
             { titulo: "Como ela fala de metas que não bateu", desc: "Culpa o contexto antes de se incluir? Ou assume o que foi seu? Ownership aparece nessas histórias." },
             { titulo: "Ela demonstra curiosidade sobre o produto e o cliente?", desc: "SDR Inbound que não entende o que vende não qualifica bem. Interesse genuíno no problema do prospect é o diferencial." },
+            { titulo: "Como fala de gestores ou metas anteriores", desc: "Culpa generalizada é red flag. Reconhecer o próprio papel mesmo quando o resultado foi ruim é maturidade." },
           ]},
-        ]
+        ],
       },
     ]
   },
   {
-    id: "closer", nome: "Closer", color: "#DC2626", cs: "#FCA5A5", icon: "🎯",
+    id: "closer", nome: "Closer", color: "#DC2626", cs: "#FCA5A5", icon: "🎯", usaNivel: true,
     etapas: [
       {
-        titulo: "Abertura", sub: "História e contexto de vida · ~8 min",
+        titulo: "1 · A empresa", sub: "Apresentação da CPV + verificação de interesse · ~8 min",
+        blocks: [
+          { t: "script", text: '"Bom te ter aqui. A conversa leva uns 40 minutos, em três partes: primeiro eu te apresento a CPV e entendo o que te trouxe até aqui, depois quero te conhecer de verdade — sua história e seu jeito — e no fim a gente entra na parte técnica de vendas. Não existe resposta certa ou errada. Fica à vontade."' },
+          { t: "group", sec: "Verificação de interesse — antes de você apresentar a empresa", qs: [
+            { q: "Antes de eu te apresentar a CPV, me conta: o que você já sabe sobre o que a gente faz aqui?", ins: "Separa quem pesquisou de quem se candidatou a tudo. Interesse real aparece nos detalhes concretos que a pessoa cita. Chegar sem saber nada é um dado — não elimina sozinho, mas revela o esforço.", fu: "O que te fez topar essa conversa? O que você tá buscando de diferente?" },
+            { q: "Como você chegou até essa vaga? O que te chamou atenção nela especificamente?", ins: "Quem tem intenção aponta algo específico da vaga ou da empresa. Quem responde no genérico ('tava procurando oportunidade') está no modo aplicar-em-tudo." },
+          ]},
+          { t: "nota", text: "Agora apresente a CPV com clareza: o que é, o que faz, o momento do negócio, o produto/ticket e onde o closer entra — recebendo o lead qualificado pelo SDR e fechando. Enquanto fala, observe — a pessoa conecta o que você diz com o que ela já mencionou? Faz perguntas? Anota?" },
+          { t: "group", sec: "Fit com o momento", qs: [
+            { q: "Depois do que te expliquei, o que mais faz sentido pra você nesse trabalho? E o que te preocupa, ou o que você acha que seria seu maior desafio aqui?", ins: "A parte da preocupação é a mais reveladora: quem responde com honestidade tem autoconsciência; quem diz 'nada, tá tudo perfeito' está performando ou não pensou a sério sobre a vaga." },
+          ]},
+        ]
+      },
+      {
+        titulo: "2 · A pessoa", sub: "História e contexto de vida · ~14 min",
         blocks: [
           { t: "nota", text: "O objetivo aqui é deixar a pessoa contar a própria história no ritmo dela. Família, origem, responsabilidades e contexto de vida surgem naturalmente — sem necessidade de perguntar diretamente." },
-          { t: "group", sec: "Aquecimento", qs: [
+          { t: "group", sec: "Trajetória", qs: [
             { q: "Me conta um pouco da sua história — de onde você veio, como chegou até onde tá hoje.", ins: "O que a pessoa escolhe contar primeiro revela o que é prioridade pra ela. Família, cidade, trajetória — tudo vem voluntariamente." },
-            { q: "O que te fez topar essa conversa? O que você tá buscando de diferente?", ins: "Motivação real — financeira, crescimento, fuga, ambição." },
+            { q: "Qual experiência profissional mais te formou até hoje? Por quê ela, e não outra?", ins: "Quem aprende extrai lição de experiências específicas. A escolha e o motivo mostram o que a pessoa valoriza — resultado, aprendizado, relação, superação." },
           ]},
           { t: "nota", text: "Não pergunte diretamente sobre idade, estado civil ou filhos — além de ser vedado pela CLT, é desnecessário. Quem tem família geralmente menciona ao falar de contexto de vida ou motivação financeira. O que a pessoa escolhe contar voluntariamente é dado muito mais rico do que o que ela responderia por obrigação." },
+          { t: "group", sec: "Maturidade financeira e fit PJ", qs: [
+            { q: "O que você faz quando tá em um mês ruim e a conta não fecha?", ins: "Maturidade financeira + reação à pressão. Entra em espiral ou ativa plano?" },
+            { q: "Você já viveu de comissão pura? Como você se organizava?", ins: "Realidade do PJ comissionado. Quem não sobreviveu a mês ruim antes, vai pedir fixo em 60 dias." },
+          ]},
           { t: "obs", items: [
             { titulo: "Clareza de fala", desc: "Como a pessoa se expressa e organiza o raciocínio." },
             { titulo: "Motivação de entrada", desc: "O que realmente a trouxe até aqui — financeiro, crescimento, fuga, ambição." },
-            { titulo: "Contexto de vida", desc: "Responsabilidades, ritmo e o que molda as decisões dela." },
             { titulo: "Presença e postura", desc: "Como ela se apresenta quando não está em modo defesa." },
             { titulo: "Autoconsciência", desc: "Ela sabe o que quer e por quê?" },
           ]},
         ]
       },
       {
-        titulo: "Técnico", sub: "Processo, método e objeção · ~20 min",
-        blocks: [
-          { t: "alerta", text: "As perguntas parecem conversa, mas cada uma tem um critério de avaliação interno específico. Não entregue o critério — só faça a pergunta e escute." },
-          { t: "group", sec: "Processo e método", qs: [
-            { q: "Me conta uma venda que você perdeu. E me fala onde você acha que perdeu.", ins: "Autocrítica real vs. culpa externa. Closer bom sabe exatamente onde escorregou." },
-            { q: "Quando o lead traz preço como objeção, qual é o seu primeiro movimento?", ins: "Isola a objeção ou já começa a dar desconto? Processo vs. impulso." },
-            { q: "Você já trabalhou com metodologia de vendas definida pela empresa ou sempre construiu do seu jeito?", ins: "Aderência a processo. Sênior que improvisa quebra a operação." },
-            { q: "Me conta como você conduzia o follow-up. Qual era a sua lógica?", ins: "Tem sistema ou é no feeling? Qual a cadência, qual o gatilho." },
-            { q: "Qual foi sua melhor fase de resultado? O que você atribui a isso?", ins: "Consegue replicar ou foi sorte de pipeline? Mentalidade de consistência." },
-          ]},
-          { t: "nota", text: "Se em algum momento o candidato culpar muito o SDR, o marketing ou o lead pela perda — isso é sinal de alerta de postura. Não aprofunde ali, só registre internamente." },
-          { t: "obs", items: [
-            { titulo: "Gestão de objeção", desc: "Isola, investiga e converte — ou entra em desconto por impulso?" },
-            { titulo: "Respeito ao processo", desc: "Segue metodologia ou sempre constrói do próprio jeito?" },
-            { titulo: "Autocrítica", desc: "Sabe onde perdeu ou distribui culpa?" },
-            { titulo: "Sistema de follow-up", desc: "Tem cadência e critério ou age no feeling?" },
-            { titulo: "Consistência de resultado", desc: "A boa fase foi construída ou foi sorte de pipeline?" },
-          ]},
-        ]
-      },
-      {
-        titulo: "Postura", sub: "Maturidade e fit cultural · ~12 min",
-        blocks: [
-          { t: "alerta", text: "Esse é o bloco mais crítico. A regra aqui é nunca perguntar sobre maturidade diretamente — você vai ouvir o que a pessoa acha que você quer ouvir." },
-          { t: "group", sec: "Maturidade e fit", qs: [
+        titulo: "3 · Técnica", sub: "Processo, objeção e resultado · ~20 min · adapta ao nível",
+        intro: [
+          { t: "nota", text: "Selecione o nível da vaga no topo (Júnior / Pleno / Sênior) — as perguntas técnicas abaixo se ajustam." },
+          { t: "alerta", text: "As perguntas parecem conversa, mas cada uma tem um critério de avaliação interno específico. Não entregue o critério — só faça a pergunta e escute. A regra vale também pra maturidade: nunca pergunte sobre ela diretamente, ou você vai ouvir o que a pessoa acha que você quer ouvir." },
+          { t: "group", sec: "Postura sob pressão", qs: [
             { q: "Me conta uma situação em que você discordou do seu gestor ou da empresa sobre como vender. O que você fez?", ins: "Resolve dentro ou cria atrito? Tem postura sem ser rebelde?" },
-            { q: "O que você faz quando tá em um mês ruim e a conta não fecha?", ins: "Maturidade financeira + reação à pressão. Entra em espiral ou ativa plano?" },
-            { q: "Você já viveu de comissão pura? Como você se organizava?", ins: "Realidade do PJ comissionado. Quem não sobreviveu a mês ruim antes, vai pedir fixo em 60 dias." },
           ]},
-          { t: "obs", items: [
-            { titulo: "Ownership", desc: "Assume o resultado como seu ou distribui a responsabilidade?" },
-            { titulo: "Reação à pressão", desc: "Entra em espiral ou ativa um plano quando o mês aperta?" },
-            { titulo: "Maturidade financeira", desc: "Sabe organizar a vida com renda variável?" },
-            { titulo: "Fit PJ", desc: "Já sobreviveu a mês ruim de comissão — ou vai pedir fixo em 60 dias?" },
-          ]},
-        ]
-      },
-      {
-        titulo: "Encerramento", sub: "Inversão do jogo · ~5 min",
-        blocks: [
+        ],
+        porNivel: {
+          junior: [
+            { t: "group", sec: "Fundamentos de processo", qs: [
+              { q: "Quando o lead traz preço como objeção, qual é o seu primeiro movimento?", ins: "Isola a objeção ou já começa a dar desconto? Processo vs. impulso — mesmo júnior, quem tem uma regra clara é mais confiável que quem decide por instinto." },
+              { q: "Você já trabalhou com metodologia de vendas definida pela empresa, ou sempre vendeu do seu jeito?", ins: "Aderência a processo. Júnior que segue estrutura aprende mais rápido do que quem quer reinventar a roda desde o início." },
+              { q: "Me conta como você faz o follow-up depois de uma conversa que não fechou na hora.", ins: "Tem sistema ou é no feeling? Mesmo básico, uma cadência clara vale mais que 'eu mando mensagem de vez em quando'." },
+            ]},
+            { t: "group", sec: "Cenário prático", qs: [
+              { q: "Vamos simular: eu sou um lead que gostou da proposta mas disse 'preciso pensar'. Me responde agora — o que você diria?", ins: "O teste mais honesto de um júnior: reação na hora, sem decorar. Observe se investiga a real objeção por trás do 'preciso pensar' ou já parte pra pressão/desconto." },
+            ]},
+          ],
+          pleno: [
+            { t: "group", sec: "Processo e método", qs: [
+              { q: "Me conta uma venda que você perdeu. E me fala onde você acha que perdeu.", ins: "Autocrítica real vs. culpa externa. Closer bom sabe exatamente onde escorregou." },
+              { q: "Me conta como você conduzia o follow-up. Qual era a sua lógica?", ins: "Tem sistema ou é no feeling? Qual a cadência, qual o gatilho." },
+              { q: "Qual foi sua melhor fase de resultado? O que você atribui a isso?", ins: "Consegue replicar ou foi sorte de pipeline? Mentalidade de consistência." },
+            ]},
+            { t: "nota", text: "Se em algum momento o candidato culpar muito o SDR, o marketing ou o lead pela perda — isso é sinal de alerta de postura. Não aprofunde ali, só registre internamente." },
+            { t: "obs", items: [
+              { titulo: "Gestão de objeção", desc: "Isola, investiga e converte — ou entra em desconto por impulso?" },
+              { titulo: "Respeito ao processo", desc: "Segue metodologia ou sempre constrói do próprio jeito?" },
+              { titulo: "Sistema de follow-up", desc: "Tem cadência e critério ou age no feeling?" },
+            ]},
+          ],
+          senior: [
+            { t: "group", sec: "Estratégia e consistência de resultado", qs: [
+              { q: "Me conta de uma fase em que você liderou ou fez o número do time subir de forma consistente. O que mudou e qual foi o resultado — com número?", ins: "Ownership de resultado em escala. O número importa: quem lidera resultado mede impacto. Ficar vago aqui é red flag para o nível." },
+              { q: "Como você constrói ou refina uma metodologia de vendas pra um time inteiro, e não só pra você mesmo?", ins: "Método próprio e pensamento de sistema. Sênior tem um jeito estruturado de transmitir o que funciona, não guarda o talento só pra si." },
+              { q: "Como você decide quando desconto é estratégia e quando é fraqueza?", ins: "Critério de negociação em altitude. Sênior de verdade fala em margem e posicionamento, não só em 'fechar de qualquer jeito'." },
+            ]},
+            { t: "group", sec: "Cenário prático — estratégia aplicada", qs: [
+              { q: "A CPV quer subir o ticket médio e a taxa de fechamento nos próximos 6 meses. Como você estruturaria o processo — objeção, follow-up, negociação — pra chegar lá?", ins: "Pensamento estratégico aplicado à nossa realidade. Observe se faz perguntas antes de responder (sinal de senioridade) e se define métrica de sucesso desde o começo." },
+            ]},
+            { t: "group", sec: "Liderança e mentoria", qs: [
+              { q: "Como você forma um closer júnior? Como ensina a isolar uma objeção sem cair em desconto por impulso?", ins: "Liderança e desenvolvimento. Revela se sabe multiplicar resultado através de gente ou se é um executor sênior que só entrega sozinho." },
+              { q: "Como você diagnostica quando um closer do time está numa fase ruim — é falta de pipeline, de processo ou de postura?", ins: "Diagnóstico de gente, não só de número. Sênior bom separa causa raiz antes de prescrever solução." },
+            ]},
+          ],
+        },
+        fim: [
           { t: "nota", text: "Aqui você inverte o papel e observa como o closer age quando está do outro lado. As perguntas que ele faz dizem mais do que as respostas que ele deu." },
-          { t: "group", sec: "Perguntas finais obrigatórias", qs: [
+          { t: "group", sec: "Encerramento — pergunta obrigatória", qs: [
             { q: "Antes de eu te contar os próximos passos, você tem alguma pergunta sobre a operação, o produto ou o que a gente espera?", ins: "Pergunta sobre comissão logo? Pergunta sobre processo, produto, time? Closer bom pergunta sobre ticket médio, ciclo de venda, qualidade do lead ou estrutura do time. Closer mediano pergunta sobre salário. Closer ruim não pergunta nada." },
           ]},
           { t: "obs", items: [
@@ -411,73 +499,105 @@ const CARGOS = [
             { titulo: "Closer mediano", desc: "Pergunta sobre salário." },
             { titulo: "Closer ruim", desc: "Não pergunta nada." },
           ]},
-        ]
+        ],
       },
     ]
   },
   {
-    id: "filmmaker", nome: "Filmmaker", color: "#B45309", cs: "#FCD34D", icon: "🎬",
+    id: "filmmaker", nome: "Filmmaker", color: "#B45309", cs: "#FCD34D", icon: "🎬", usaNivel: true,
     etapas: [
       {
-        titulo: "Abertura", sub: "Script + aquecimento",
+        titulo: "1 · A empresa", sub: "Apresentação da CPV + verificação de interesse · ~8 min",
         blocks: [
-          { t: "script", text: '"Antes de começar, quero que saiba que não existe resposta certa ou errada aqui. Estou mais interessado em te conhecer como pessoa e entender como você pensa do que avaliar o técnico — isso a gente já viu no portfólio. Pode ficar à vontade."' },
-          { t: "nota", text: "O portfólio já foi avaliado. Aqui você investiga como a pessoa pensa processo, colaboração e qualidade. O que você busca é olhar, processo e responsabilidade — não volume de equipamento." },
-          { t: "group", sec: "Aquecimento", qs: [
-            { q: "Me conta um pouco sobre você — não o currículo. A pessoa.", ins: "A escolha do que contar primeiro é reveladora. Quem fala só de conquistas está no modo performance. Quem traz algo pessoal está sendo real.", fu: 'Se citar só realizações: "E fora do trabalho, o que te define?"' },
-            { q: "O que você sabia sobre a CPV antes de se candidatar? Como você chegou até aqui?", ins: "Separa quem se candidatou a tudo de quem teve intenção. Interesse genuíno aparece nos detalhes que a pessoa menciona." },
+          { t: "script", text: '"Bom te ter aqui. A conversa leva uns 40 minutos, em três partes: primeiro eu te apresento a CPV e entendo o que te trouxe até aqui, depois quero te conhecer de verdade — sua história e seu jeito — e no fim a gente entra na parte técnica de vídeo. O portfólio a gente já viu, então aqui o foco é como você pensa. Não existe resposta certa ou errada. Fica à vontade."' },
+          { t: "group", sec: "Verificação de interesse — antes de você apresentar a empresa", qs: [
+            { q: "Antes de eu te apresentar a CPV, me conta: o que você já sabe sobre o que a gente faz aqui?", ins: "Separa quem pesquisou de quem se candidatou a tudo. Interesse real aparece nos detalhes concretos que a pessoa cita. Chegar sem saber nada é um dado — não elimina sozinho, mas revela o esforço.", fu: "O que te fez querer trabalhar justamente com vídeo nesse tipo de negócio?" },
+            { q: "Como você chegou até essa vaga? O que te chamou atenção nela especificamente?", ins: "Quem tem intenção aponta algo específico da vaga ou da empresa. Quem responde no genérico ('tava procurando oportunidade') está no modo aplicar-em-tudo." },
+          ]},
+          { t: "nota", text: "Agora apresente a CPV com clareza: o que é, o que faz, o momento do negócio e onde vídeo entra nisso — servindo social media, tráfego e o material comercial. Enquanto fala, observe — a pessoa conecta o que você diz com o que ela já mencionou? Faz perguntas? Anota? Engajamento aqui é sinal de interesse real." },
+          { t: "group", sec: "Fit com o momento", qs: [
+            { q: "Depois do que te expliquei, o que mais faz sentido pra você nesse trabalho? E o que te preocupa, ou o que você acha que seria seu maior desafio aqui?", ins: "A parte da preocupação é a mais reveladora: quem responde com honestidade tem autoconsciência; quem diz 'nada, tá tudo perfeito' está performando ou não pensou a sério sobre a vaga." },
           ]},
         ]
       },
       {
-        titulo: "Visão criativa", sub: "Como ela pensa em vídeo",
+        titulo: "2 · A pessoa", sub: "História, trajetória e perfil · ~14 min",
         blocks: [
-          { t: "group", sec: "Perguntas", qs: [
+          { t: "group", sec: "Trajetória", qs: [
+            { q: "Me conta sua história — de onde você veio e como o vídeo entrou na sua vida. Foi escolha ou aconteceu?", ins: "Quem escolheu ativamente tende a ter mais comprometimento e identidade profissional formada. Observe se criou identidade com a área ou ainda está passando por ela.", fu: "Se ficar só no profissional: 'E fora do trabalho, o que te define?'" },
+            { q: "Qual experiência profissional mais te formou até hoje? Por quê ela, e não outra?", ins: "Quem aprende extrai lição de experiências específicas. A escolha e o motivo mostram o que a pessoa valoriza — resultado, aprendizado, relação, superação." },
             { q: "Me mostra — ou descreve — um vídeo que você fez e que te orgulha mais. Por que esse?", ins: "Quem escolhe pela qualidade técnica vs. quem escolhe pelo impacto gerado são perfis diferentes. O 'por quê' revela o que a pessoa valoriza no próprio trabalho.", fu: "E um que você não colocaria no portfólio mas que aprendeu muito fazendo?" },
-            { q: "Quando você assiste a um vídeo muito bom, o que você observa? O que passa na sua cabeça?", ins: "Quem analisa luz, corte, ritmo, intenção narrativa tem olho treinado. Quem só diz 'achei bonito' ainda não desenvolveu visão crítica." },
-            { q: "Me descreve como você pensa um vídeo do zero — antes de ligar a câmera, o que já precisa estar resolvido?", ins: "Revela processo criativo e nível de planejamento. Quem tem câmera na mão antes de ter intenção na cabeça gera material de baixa qualidade." },
+          ]},
+          { t: "group", sec: "Autoconhecimento — qualidades e defeitos", qs: [
+            { q: "Se eu ligasse agora pra alguém que trabalhou de perto com você, quais duas forças ela citaria na hora? E qual defeito citaria primeiro?", ins: "Enquadrar pelos olhos do outro derruba a resposta ensaiada de 'meu defeito é ser perfeccionista'. Quem tem autoconsciência responde o defeito sem sofrer; quem trava ou maquia mostra pouca maturidade.", fu: "E você concorda com esse defeito? O que já fez a respeito dele?" },
+            { q: "Qual crítica você já recebeu mais de uma vez na vida — de pessoas diferentes?", ins: "Crítica recorrente aponta ponto cego real, não episódio isolado. O valor está no que a pessoa fez com ela: ignorou, racionalizou ou trabalhou de verdade." },
+            { q: "Em que tipo de ambiente e rotina você rende o seu melhor — e em qual você murcha?", ins: "Fit de perfil puro. Compare a resposta com a realidade do dia a dia da CPV. Ninguém rende em tudo; quem se conhece sabe onde brilha e onde sofre." },
           ]},
         ]
       },
       {
-        titulo: "Responsabilidade e aprendizado", sub: "Ownership + crescimento",
-        blocks: [
-          { t: "group", sec: "Ownership", qs: [
-            { q: "Já teve uma gravação que deu errado no dia — equipamento, luz, locação. O que você fez?", ins: "Adaptação em tempo real é a habilidade mais valiosa. Quem entra em colapso quando o plano falha vai travar na produção.", fu: "E o resultado final ficou comprometido ou você conseguiu recuperar?" },
-            { q: "Já entregou um vídeo que você sabia que estava abaixo do seu padrão? O que aconteceu?", ins: "O que importa é se a pessoa normaliza isso ou sente desconforto genuíno. E se comunicou ou entregou em silêncio." },
+        titulo: "3 · Técnica", sub: "Competência de vídeo · ~16 min · adapta ao nível",
+        intro: [
+          { t: "nota", text: "Selecione o nível da vaga no topo (Júnior / Pleno / Sênior) — as perguntas técnicas abaixo se ajustam. O portfólio já foi avaliado; o que você busca aqui é olhar, processo e responsabilidade — não volume de equipamento." },
+          { t: "alerta", text: 'Não exija o vídeo mais bonito — exija raciocínio coerente e honestidade sobre o que não sabe. Quem diz "não sei, mas eu resolveria assim..." tem mais valor do que quem enrola.' },
+        ],
+        porNivel: {
+          junior: [
+            { t: "group", sec: "Fundamentos", qs: [
+              { q: "Quando você assiste a um vídeo muito bom, o que você observa? O que passa na sua cabeça?", ins: "Quem analisa luz, corte, ritmo, intenção narrativa tem olho treinado. Quem só diz 'achei bonito' ainda não desenvolveu visão crítica." },
+              { q: "Me descreve como você pensa um vídeo do zero — antes de ligar a câmera, o que já precisa estar resolvido?", ins: "Revela processo criativo e nível de planejamento. Quem tem câmera na mão antes de ter intenção na cabeça gera material de baixa qualidade." },
+              { q: "Já teve uma gravação que deu errado no dia — equipamento, luz, locação. O que você fez?", ins: "Adaptação em tempo real é a habilidade mais valiosa. Quem entra em colapso quando o plano falha vai travar na produção.", fu: "E o resultado final ficou comprometido ou você conseguiu recuperar?" },
+            ]},
+            { t: "group", sec: "Cenário prático", qs: [
+              { q: "Vou te dar um tema — [ex: um dia de trabalho na CPV, ou um produto de um cliente]. Me fala como você pensaria esse vídeo: o que gravaria, em que ordem e por quê.", ins: "O teste mais honesto de um júnior: raciocínio cru na hora. Observe se pensa em intenção narrativa antes de listar planos soltos." },
+            ]},
+            { t: "group", sec: "Ferramentas e aprendizado", qs: [
+              { q: "Que equipamento e software você usa no dia a dia — câmera, edição, som? Como você aprendeu a usar?", ins: "Mapeia o toolkit e, mais importante, se é autodidata. Júnior que aprende sozinho compensa a falta de experiência rápido." },
+              { q: "Qual técnica ou estilo você aprendeu no último ano que mudou algo no seu jeito de filmar ou editar?", ins: "Filmmaker que aprende continuamente responde sem pensar muito. Quem demora ou é vago aprende por acidente, não por intenção." },
+            ]},
+          ],
+          pleno: [
+            { t: "group", sec: "Processo e ownership", qs: [
+              { q: "Já entregou um vídeo que você sabia que estava abaixo do seu padrão? O que aconteceu?", ins: "O que importa é se a pessoa normaliza isso ou sente desconforto genuíno. E se comunicou ou entregou em silêncio." },
+              { q: "Como você organiza seus arquivos de filmagem e edição? O que alguém de fora entenderia do seu HD?", ins: "Organização de material revela organização mental. Filmmaker desorganizado perde material, perde tempo e gera retrabalho." },
+              { q: "Como você gerencia projetos quando tem mais de um rodando ao mesmo tempo?", ins: "Quem aceita tudo sem critério vai entregar tudo mal. Quem tem sistema — mesmo simples — entrega com mais consistência." },
+            ]},
+            { t: "group", sec: "Cenário prático — crítica", qs: [
+              { q: "Me conta de um vídeo que você refez, ou que teria refeito, depois de ver o resultado. O que mudaria e por quê?", ins: "Olhar crítico sobre o próprio trabalho é raro e valioso. Quem aponta exatamente o que mudaria tem o nível de autocrítica que gera evolução real." },
+            ]},
+            { t: "group", sec: "Colaboração", qs: [
+              { q: "Já teve que ceder criativamente num projeto — fazer de um jeito que não era o seu? Como foi?", ins: "Quem cede sem ressentimento e sabe distinguir 'minha visão está certa' de 'minha visão é mais uma opção' tem maturidade." },
+              { q: "Como você alinha o que vai gravar com quem pediu o vídeo? Me descreve o processo antes de ligar a câmera.", ins: "Filmmaker que grava sem alinhar expectativa gera retrabalho. Quem tem processo de briefing confirma objetivo, estilo e entregáveis antes de investir tempo." },
+            ]},
+          ],
+          senior: [
+            { t: "group", sec: "Estratégia e narrativa", qs: [
+              { q: "Como você conecta as decisões de vídeo aos objetivos de negócio da empresa? Me dá um exemplo concreto de quando fez exatamente isso.", ins: "Altitude estratégica. Sênior de verdade fala em objetivo de negócio, não em plano bonito. Sem exemplo concreto, é sênior de tempo de casa, não de estratégia." },
+              { q: "Me conta de uma vez em que você definiu ou reformulou a linguagem visual de vídeo de uma marca. Qual era o cenário, o que você mudou e qual foi o resultado — com número, se tiver.", ins: "Ownership de resultado. O número importa quando existe: quem lidera estratégia mede impacto. Ficar vago aqui é red flag para o nível." },
+              { q: "Você tem um framework ou processo próprio pra manter consistência de estilo quando várias pessoas produzem vídeo ao mesmo tempo?", ins: "Método próprio e pensamento de sistema. Sênior tem um jeito estruturado (guidelines, referência, revisão), não improvisa caso a caso." },
+            ]},
+            { t: "group", sec: "Cenário prático — estratégia aplicada", qs: [
+              { q: "A CPV quer elevar o padrão de vídeo de tudo que produz nos próximos 6 meses — social, comercial, institucional. Me esboça como você estruturaria isso: prioridades, processo e como mediria se funcionou.", ins: "Pensamento estratégico aplicado à nossa realidade. Observe se faz perguntas antes de responder (sinal de senioridade), se prioriza com critério e se define o que significa 'funcionou' desde o começo." },
+            ]},
+            { t: "group", sec: "Alocação e liderança", qs: [
+              { q: "Você tem tempo e verba limitados e precisa escolher: mais volume de vídeo, subir a qualidade de produção, ou investir em equipamento novo. Como você decide?", ins: "Trade-off de alocação. Não existe resposta certa — existe raciocínio. Sênior bom decide a partir do objetivo e do estágio da marca, não por preferência pessoal." },
+              { q: "Como você forma e dá feedback pra um filmmaker júnior? Como você faz alguém evoluir de verdade?", ins: "Liderança e desenvolvimento. Revela se sabe multiplicar resultado através de gente ou se é um executor sênior que só entrega sozinho." },
+            ]},
+          ],
+        },
+        fim: [
+          { t: "group", sec: "Encerramento — perguntas finais obrigatórias", qs: [
+            { q: "Tem alguma pergunta sobre a empresa, a equipe ou o dia a dia aqui?", ins: "A qualidade das perguntas revela o nível de interesse real. Quem não tem nenhuma pergunta estava só de passagem." },
+            { q: "Tem algo que você queria ter falado e não teve oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
           ]},
-          { t: "group", sec: "Aprendizado", qs: [
-            { q: "Qual técnica ou estilo você aprendeu no último ano que mudou algo no seu jeito de filmar ou editar?", ins: "Filmmaker que aprende continuamente responde sem pensar muito. Quem demora ou é vago aprende por acidente, não por intenção." },
-            { q: "Me conta de um vídeo que você refez, ou que teria refeito, depois de ver o resultado. O que mudaria?", ins: "Olhar crítico sobre o próprio trabalho é raro e valioso. Quem aponta exatamente o que mudaria tem o nível de autocrítica que gera evolução real." },
-          ]},
-        ]
-      },
-      {
-        titulo: "Relações e processo", sub: "Colaboração + organização",
-        blocks: [
-          { t: "group", sec: "Colaboração", qs: [
-            { q: "Já teve que ceder criativamente num projeto — fazer de um jeito que não era o seu? Como foi?", ins: "Quem cede sem ressentimento e sabe distinguir 'minha visão está certa' de 'minha visão é mais uma opção' tem maturidade." },
-            { q: "Como você alinha o que vai gravar com quem pediu o vídeo? Me descreve o processo antes de ligar a câmera.", ins: "Filmmaker que grava sem alinhar expectativa gera retrabalho. Quem tem processo de briefing confirma objetivo, estilo e entregáveis antes de investir tempo." },
-          ]},
-          { t: "group", sec: "Organização", qs: [
-            { q: "Como você organiza seus arquivos de filmagem e edição? O que alguém de fora entenderia do seu HD?", ins: "Organização de material revela organização mental. Filmmaker desorganizado perde material, perde tempo e gera retrabalho." },
-            { q: "Como você gerencia projetos quando tem mais de um rodando ao mesmo tempo?", ins: "Quem aceita tudo sem critério vai entregar tudo mal. Quem tem sistema — mesmo simples — entrega com mais consistência." },
-          ]},
-        ]
-      },
-      {
-        titulo: "Encerramento", sub: "Perguntas finais + o que observar",
-        blocks: [
-          { t: "group", sec: "Perguntas finais obrigatórias", qs: [
-            { q: "Tem alguma pergunta sobre a empresa, a equipe ou o dia a dia aqui?", ins: "A qualidade das perguntas revela o nível de interesse real." },
-            { q: "Tem algo que você queria ter falado e não tivemos oportunidade?", ins: "Uma das mais reveladoras. Quem aproveita o espaço mostra iniciativa e autoconsciência." },
-          ]},
+          { t: "nota", text: 'Observe o que acontece depois do "é isso, obrigado": como a pessoa se despede, como trata quem está na recepção. Caráter aparece quando a guarda baixa.' },
           { t: "obs", items: [
             { titulo: "Como ela fala de ex-chefes e colegas", desc: "Culpa generalizada é sinal de alerta. Reconhecer o lado do outro mesmo em conflito é maturidade." },
+            { titulo: "Provou processo ou só falou bonito?", desc: "No cenário prático é que se vê o ofício. Boa lábia sem raciocínio concreto é sinal de alerta." },
             { titulo: "Ela faz perguntas sobre você?", desc: "Curiosidade sobre o trabalho e a empresa é sinal de interesse real." },
             { titulo: "Como ela admite erro", desc: "Busca contextos, não desculpas. Quem assume e aprende é quem você quer no time." },
           ]},
-        ]
+        ],
       },
     ]
   },
